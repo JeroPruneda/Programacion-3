@@ -12,6 +12,7 @@ function Home(props){
         <ul className="main-nav">
             {props.opciones.map((opcion, idx) => <li key={opcion + idx}>{opcion}</li>)}
         </ul>
+        
       
      </nav>
     )
