@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home(props){
+function Header(props){
 
     return(
     <nav>
@@ -12,9 +12,8 @@ function Home(props){
         <ul className="main-nav">
             {props.opciones.map((opcion, idx) => <li key={opcion + idx}>{opcion}</li>)}
         </ul>
-        
-      
+    
      </nav>
     )
 }
-export default Home
+export default Header
