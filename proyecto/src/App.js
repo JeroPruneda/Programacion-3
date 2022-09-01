@@ -8,11 +8,12 @@ function App() {
   const opciones = ['Home','Favoritos', 'Ver todas']
   return (
     <React.Fragment>
+      <Header opciones={opciones}/>
       <main>
-       <Header opciones={opciones}/>
        <Peliculas/>
        <Series/>
       </main>
+     
      <Footer/>
     </React.Fragment>
   );
