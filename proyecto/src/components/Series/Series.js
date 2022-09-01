@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
-import PeliculasCard from '../PeliculasCard/PeliculasCard';
+import SeriesCard from '../SeriesCard/SeriesCard';
 
 
-class Peliculas extends Component {
+class Series extends Component {
     constructor(props){
         super(props)
         this.state={
@@ -12,7 +12,7 @@ class Peliculas extends Component {
     }
 
     componentDidMount(){
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c')
+        fetch('https://api.themoviedb.org/3/tv/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c')
         .then(resp => resp.json())
         .then(data => this.setState({
             data: data.results
@@ -25,15 +25,15 @@ class Peliculas extends Component {
     return (
         <>
         <div class="palabra">
-    <h3>PELÍCULAS POPULARES</h3>
+    <h3>SERIES POPULARES</h3>
 </div>
         <section className="card-container">
             {
                 this.state.data.length > 0 ?
                     this.state.data.map((personaje, idx) => 
-                    <PeliculasCard 
+                    <SeriesCard 
                     key={personaje + idx} 
-                    name={personaje.title} 
+                    name={personaje.name} 
                     image={personaje.poster_path}
                     descripcion={personaje.overview}
                     
@@ -47,6 +47,4 @@ class Peliculas extends Component {
 }
 
 
-export default Peliculas
-
-
+export default Series

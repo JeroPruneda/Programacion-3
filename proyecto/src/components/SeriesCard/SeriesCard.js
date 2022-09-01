@@ -1,8 +1,7 @@
-
 import React, {Component} from 'react'
 import './styles.css'
 
-class PeliculasCard extends Component {
+class SeriesCard extends Component {
 
   constructor(props){
     super(props)
@@ -26,19 +25,11 @@ class PeliculasCard extends Component {
         </article>
     </a>
 </section>
-   
-     
-            
-  
-              
 
-            
-            
-    
   
     )
   }
 }
 
 
-export default PeliculasCard
+export default SeriesCard

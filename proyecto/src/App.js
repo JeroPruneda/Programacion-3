@@ -3,6 +3,7 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Peliculas from './components/Peliculas/Peliculas'
 import Search from './components/Search/Search'
+import Series from './components/Series/Series'
 
 function App() {
   const opciones = ['Home','Favoritos', 'Ver todas']
@@ -11,6 +12,7 @@ function App() {
       <Header opciones={opciones} /> <Search />
       <main>
        <Peliculas/>
+       <Series/>
       </main>
      
      <Footer/>
