@@ -4,13 +4,27 @@ import Header from './components/Header/Header'
 import Peliculas from './components/Peliculas/Peliculas'
 import Search from './components/Search/Search'
 import Series from './components/Series/Series'
+import NotFound from './components/NotFound/NotFound'
+import {Route, Switch} from "react-router-dom"
+
 
 function App() {
-  const opciones = ['Home','Favoritos', 'Ver todas']
+  
   return (
     <React.Fragment>
-      <Header opciones={opciones} /> <Search />
+     {/*  <Switch>
+        <Route path= "/favoritos" component={Favoritos}></Route>
+      </Switch> */}
+      <Header /> 
+
+      <Search />
       <main>
+
+        <Switch>
+        <Route path= "/detalle/:id" component={Peliculas}></Route>
+        <Route path= "/detalleSerie/:id" component={Series}></Route>
+        </Switch>
+
        <Peliculas/>
        <Series/>
       </main>

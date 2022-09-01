@@ -30,13 +30,14 @@ class Peliculas extends Component {
         <section className="card-container">
             {
                 this.state.data.length > 0 ?
-                    this.state.data.map((personaje, idx) => 
+                    this.state.data.map((jose, idx) => 
                     <PeliculasCard 
-                    key={personaje + idx} 
-                    name={personaje.title} 
-                    image={personaje.poster_path}
-                    descripcion={personaje.overview}
-                    
+                    key={jose + idx} 
+                    name={jose.title} 
+                    image={jose.poster_path}
+                    descripcion={jose.overview}
+                    id = {jose.id}
+
                     />):
                 <h1>Cargando..</h1>
             }

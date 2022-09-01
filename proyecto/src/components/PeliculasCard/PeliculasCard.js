@@ -1,5 +1,7 @@
 
 import React, {Component} from 'react'
+import {Link} from "react-router-dom"
+
 import './styles.css'
 
 class PeliculasCard extends Component {
@@ -8,19 +10,20 @@ class PeliculasCard extends Component {
     super(props)
     this.state ={
       verMas: 'hide',
-      value:""
+
     }
   }
+
 
   render(){
     return (
 
-<section class="peliculaspopulares">
-    <a class="apolaroid" href="">
-        <article class="polaroid">
-            <img class="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt=""></img>
-            <div class="textopolaroid">
-                <p class="textopolaroidtitulo">{this.props.name}</p>
+<section className='peliculaspopulares'>
+    <a className="apolaroid" href="">
+        <article className="polaroid">
+            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" /> 
+            <div className="textopolaroid">
+                <p className="textopolaroidtitulo"> <Link to={`/detalle${this.props.id}`}> {this.props.name}</Link></p>
                 <p></p>
             </div>
         </article>
