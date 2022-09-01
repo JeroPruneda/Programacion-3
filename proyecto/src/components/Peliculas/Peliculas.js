@@ -1,12 +1,30 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 
-function Peliculas() {
-  return (
+class Peliculas extends Component() {
+
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+  }
+  componentDidMount(){
+    fetch()
+    .then( resp => resp.json())
+    .then (data => console.log(data))
+  }
+
+  
+
+  render(){
+    return(
     <>
-        <h1>Aca van las pelis </h1> 
-        </>//ACA LLAMAMOS A LA API
-  )
+      <h1>Aca van las pelis </h1> 
+    </> //ACA LLAMAMOS A LA API
+    )
+  }
 }
 
 export default Peliculas
+
