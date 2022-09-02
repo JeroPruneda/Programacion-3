@@ -1,5 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link, Route} from "react-router-dom"
+
 
 function Header(props){
 
@@ -11,11 +12,12 @@ function Header(props){
 
         </ul>
         <ul className="main-nav">
-        <li> 
-            <Link to ={`/`}></Link> Home</li>
-            <li> <Link to ={`/favoritos`}></Link> Favoritos</li>
+            <li> <Link to ={`/`}>Home</Link></li>
+            <li> <Link to ={`/favoritos`}>Favoritos</Link></li>
             <li> <Link to ={`/verTodas`}></Link> Ver Todas</li>
         </ul>
+        
+     
     
      </nav>
     )

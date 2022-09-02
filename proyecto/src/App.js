@@ -1,10 +1,12 @@
 import React from 'react'
+import index from './index'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Peliculas from './components/Peliculas/Peliculas'
 import Search from './components/Search/Search'
 import Series from './components/Series/Series'
 import NotFound from './components/NotFound/NotFound'
+import Favoritos from './components/Favoritos/Favoritos';
 import {Route, Switch} from "react-router-dom"
 
 
@@ -12,10 +14,13 @@ function App() {
   
   return (
     <React.Fragment>
-     {/*  <Switch>
-        <Route path= "/favoritos" component={Favoritos}></Route>
-      </Switch> */}
-      <Header /> 
+      <Switch>
+        <Route exact path= "/" > <index/></Route>
+        <Route path= "/favoritos" component={Favoritos}/>
+      </Switch> 
+      <Header 
+      
+      /> 
 
       <Search />
       <main>

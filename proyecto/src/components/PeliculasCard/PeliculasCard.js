@@ -13,7 +13,17 @@ class PeliculasCard extends Component {
 
     }
   }
-
+  // verMas(){
+  //   if (this.state.verMas === "show"){
+  //     this.setState 
+  //     ({verMas: "hide"
+  //   })}
+  //   else {
+  //     this.setState({
+  //       verMas :"show"
+  //     })
+  //   }
+  // }
 
   render(){
     return (
@@ -23,8 +33,9 @@ class PeliculasCard extends Component {
         <article className="polaroid">
             <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" /> 
             <div className="textopolaroid">
-                <p className="textopolaroidtitulo"> <Link to={`/detalle${this.props.id}`}> {this.props.name}</Link></p>
-                <p></p>
+                <p className="textopolaroidtitulo"> {this.props.name}</p>
+              <button onClick = {() => this.verMas ()} > <Link to={`/detalle${this.props.id}`}> VER MAS</Link></button> 
+            
             </div>
         </article>
     </a>
