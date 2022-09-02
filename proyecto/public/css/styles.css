@@ -54,7 +54,41 @@ nav ul {
     margin-right: 10px;
 }
 
-
+/* //el buscador */
+.search-box {
+    position: relative;
+    width: 50%;
+    margin: 50px;
+    }
+    .search-form {
+    height: 32px;
+    background-color: #fff;
+    overflow: hidden;
+    }
+    .search-text {
+    font-size: 14px;
+    color: #ddd;
+    border-width: 0;
+    background: transparent;
+    }
+    
+    .search-box input[type="text"] {
+    width: 50%;
+    padding: 8px 0 12px 1em;
+    color: #333;
+    outline: none;
+    }
+    .search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 70px;
+    color: rgb(0, 0, 0);
+    line-height: 4px;
+    border-width: 0;
+    cursor: pointer;
+    }
 
 
 
