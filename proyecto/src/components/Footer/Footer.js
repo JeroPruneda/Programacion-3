@@ -4,7 +4,16 @@ import './styles.css'
 function Footer() {
   return (
     <footer>
-        <p>Jose Souto <br></br> Jeronimo Pruneda<br></br> Jeronimo Sojo</p>
+             
+             <ul class="terminos">
+        <a class="miniterminos" > Términos y condiciones </a>
+        <a class="miniterminos" > Ayuda </a>
+        <a class="miniterminos" > Contacto </a>
+        <a class="miniterminosprivacidad" > Privacidad </a>
+        </ul>
+        <img  src="./img/logo.png" alt="logo"></img>
+             <p class="fondo">Copyright © - Todos los derechos reservados</p>
+        <p >Integrantes: Jose Souto, Jeronimo Pruneda, Jeronimo Sojo</p>
     </footer>
   )
 }

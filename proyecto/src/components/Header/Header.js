@@ -14,7 +14,7 @@ function Header(props){
         <ul className="main-nav">
             <li> <Link to ={`/`}>Home</Link></li>
             <li> <Link to ={`/favoritos`}>Favoritos</Link></li>
-            <li> <Link to ={`/verTodas`}></Link> Ver Todas</li>
+            <li> <Link to ={`/verTodas`}> Ver Todas</Link></li>
         </ul>
         
      

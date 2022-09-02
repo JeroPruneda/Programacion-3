@@ -7,6 +7,7 @@ import Search from './components/Search/Search'
 import Series from './components/Series/Series'
 import NotFound from './components/NotFound/NotFound'
 import Favoritos from './components/Favoritos/Favoritos';
+import VerTodas from './components/VerTodas/VerTodas';
 import {Route, Switch} from "react-router-dom"
 
 
@@ -17,6 +18,7 @@ function App() {
       <Switch>
         <Route exact path= "/" > <index/></Route>
         <Route path= "/favoritos" component={Favoritos}/>
+        <Route path= "/VerTodas" component={VerTodas}/>
       </Switch> 
       <Header 
       
