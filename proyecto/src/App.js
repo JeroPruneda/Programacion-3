@@ -23,6 +23,7 @@ function App() {
         <Switch>
         <Route path= "/detalle/:id" component={Peliculas}></Route>
         <Route path= "/detalleSerie/:id" component={Series}></Route>
+        <Route path= "" component={NotFound}> </Route>
         </Switch>
 
        <Peliculas/>
