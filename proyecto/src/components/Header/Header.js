@@ -1,8 +1,8 @@
 import React from "react";
-import {Link, Route} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
-function Header(props){
+function Header(){
 
     return(
     <nav>
@@ -14,7 +14,7 @@ function Header(props){
             <div className='search-box'>
             <form action='/search' className='search-form' method='get' target='_top'>
             <input className='search-text' name='q' placeholder='Escribe lo que buscas' type='text'/>
-            <button className='search-button' type='submit'><span>Busca!</span></button>
+            <button className='search-button' type='submit'><span>Buscá!</span></button>
             </form>
             </div>
             

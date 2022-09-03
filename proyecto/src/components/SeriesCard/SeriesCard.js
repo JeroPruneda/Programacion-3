@@ -14,12 +14,12 @@ class SeriesCard extends Component {
   render(){
     return (
 
-<section class="peliculaspopulares">
-    <a class="apolaroid" href="">
-        <article class="polaroid">
-            <img class="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt=""></img>
-            <div class="textopolaroid">
-                <p class="textopolaroidtitulo">{this.props.name}</p>
+<section className="peliculaspopulares">
+    <a className="apolaroid" href="">
+        <article className="polaroid">
+            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt=""></img>
+            <div className="textopolaroid">
+                <p className="textopolaroidtitulo">{this.props.name}</p>
                 <p></p>
             </div>
         </article>

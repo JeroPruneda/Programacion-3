@@ -6,7 +6,7 @@ class Favoritos extends Component{
         return(
             <>
             
-            <div class="palabra">
+            <div className="palabra">
             <h3>PELÍCULAS FAVORITAS</h3>
             </div>
             </>
