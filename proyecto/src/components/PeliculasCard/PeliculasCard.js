@@ -44,6 +44,7 @@ class PeliculasCard extends Component {
    
 </section>
     )
+    
   }
 }
 

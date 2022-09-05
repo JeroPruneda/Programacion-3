@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer'
 import NotFound from './components/NotFound/NotFound'
 import Favoritos from './components/Favoritos/Favoritos'
 import Detalle from './components/Detalle/Detalle'
-import VerTodas from './components/VerTodas/VerTodas'
+import VerTodas from './components/Ver Todas/VerTodas'
 import {Route, Switch} from "react-router-dom"
 import Home from './components/Home/Home'
 import Header from './components/Header/Header'
