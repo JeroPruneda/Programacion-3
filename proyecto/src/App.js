@@ -24,7 +24,7 @@ function App() {
         <Route exact path= "/" component={Home}/>
         <Route path= "/detalle/:id" component={Detalle} />
         <Route path= "" component={NotFound} />
-        
+
       </Switch> 
      
      <Footer/>
