@@ -24,11 +24,12 @@ class Detalle extends Component{
     render(){
         return(
             <>
-            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`}/>
+            <img src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`}/>
             <p>{this.state.detalle.title}</p>
             <p>{this.state.detalle.vote_average}</p>
             <p>{this.state.detalle.release_date}</p>
             <p>{this.state.detalle.overview}</p>
+            <button> Agregar a Favoritos</button>
             </>
             
         )
