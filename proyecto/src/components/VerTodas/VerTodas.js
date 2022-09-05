@@ -25,7 +25,7 @@ class VerTodas extends Component {
     return (
         <>
     <div className="palabra">
-        <h3>TODAS LAS PELICULAS Y SERIES</h3>
+        <h3>ACA ESTAN TODAS LAS PELICULAS</h3>
     </div>     
         </>
     )
