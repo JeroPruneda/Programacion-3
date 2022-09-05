@@ -26,9 +26,9 @@ class Search extends Component{
         return(
     <>
     <div>
-    <form className="search-form "  onSubmit={(e) => this.evitarRefresh(e)}>
-    <input className="search-box" type={"text"} onChange= {(e) => this.guardarCambios(e)} value={this.state.valor}></input>
-    <button className="search-button">Buscá</button>
+    <form onSubmit={(e) => this.evitarRefresh(e)}>
+    <input  type={"text"} onChange= {(e) => this.guardarCambios(e)} value={this.state.valor}></input>
+    <button >Buscá</button>
     </form>
     </div>
     </> 
