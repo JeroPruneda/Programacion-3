@@ -8,11 +8,13 @@ import VerTodas from './components/VerTodas/VerTodas'
 import {Route, Switch} from "react-router-dom"
 import Home from './components/Home/Home'
 import Header from './components/Header/Header'
+import TodasSeries from './components/TodasSeries/TodasSeries'
 
 
 
 function App() {
   
+
   return (
     <React.Fragment>
       
@@ -20,6 +22,7 @@ function App() {
       <Switch>
         <Route path= "/favoritos" component={Favoritos}/>
         <Route path= "/VerTodas" component={VerTodas}/>
+        <Route path= "/TodasSeries" component={TodasSeries}/>
     
         <Route exact path= "/" component={Home}/>
         <Route path= "/detalle/:id" component={Detalle} />

@@ -53,7 +53,7 @@ class Peliculas extends Component {
                     descripcion={jose.overview}
                     id = {jose.id}
                     agregar = {(id) => this.agregarFavoritos(id)}
-
+                    
                     />):
                 <h1>Cargando..</h1>
             }
