@@ -10,6 +10,7 @@ class Series extends Component {
             
         }
     }
+   
 
     componentDidMount(){
         fetch('https://api.themoviedb.org/3/tv/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c')

@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import NotFound from './components/NotFound/NotFound'
 import Favoritos from './components/Favoritos/Favoritos'
 import Detalle from './components/Detalle/Detalle'
+import DetalleSerie from './components/DetalleSerie/DetalleSerie'
 import VerTodas from './components/VerTodas/VerTodas'
 import {Route, Switch} from "react-router-dom"
 import Home from './components/Home/Home'
@@ -26,6 +27,7 @@ function App() {
     
         <Route exact path= "/" component={Home}/>
         <Route path= "/detalle/:id" component={Detalle} />
+        <Route path="/detalleSerie/:id" component={DetalleSerie}/>
         <Route path= "" component={NotFound} />
 
       </Switch> 
