@@ -5,7 +5,7 @@ class Detalle extends Component{
         super(props);
         this.state = {
             detalle: {},
-            listo: false
+            
         }
     } 
     componentDidMount(){
@@ -16,7 +16,7 @@ class Detalle extends Component{
               this.setState
             ({
             detalle: data,
-            listo: true
+            
         })  )
         .catch(error => console.log(error))
     
@@ -24,10 +24,11 @@ class Detalle extends Component{
     render(){
         return(
             <>
-            {this.state.listo ? <p>{this.state.detalle.title}</p> : ""}
-
-            <p>hola funciona el detalle</p>
-
+            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`}/>
+            <p>{this.state.detalle.title}</p>
+            <p>{this.state.detalle.vote_average}</p>
+            <p>{this.state.detalle.release_date}</p>
+            <p>{this.state.detalle.overview}</p>
             </>
             
         )
