@@ -36,7 +36,7 @@ class Series extends Component {
                     name={personaje.name} 
                     image={personaje.poster_path}
                     descripcion={personaje.overview}
-                    
+                    id = {personaje.id}
                     />):
                 <h1>Cargando..</h1>
             }

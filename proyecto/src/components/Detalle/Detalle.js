@@ -9,15 +9,16 @@ class Detalle extends Component{
         }
     } 
     componentDidMount(){
-        fetch(`https://rickandmortyapi.com/api/character/${this.props.match.params.id}`)
+        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}`)
         .then(resp => resp.json())
-        .then(data => this.setState({
+        .then(data => 
+             this.setState
+            ({
             detalle: data,
             listo: true
-        }))
+        }) )
         .catch(error => console.log(error))
     
-
     }
     render(){
         return(
@@ -27,7 +28,7 @@ class Detalle extends Component{
             </>
             
         )
-    }
+    } 
 }
 
 export default Detalle

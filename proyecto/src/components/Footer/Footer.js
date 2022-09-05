@@ -6,10 +6,10 @@ function Footer() {
     <footer>
              
         <ul className="terminos">
-        <a className="miniterminos" > Términos y condiciones </a>
-        <a className="miniterminos" > Ayuda </a>
-        <a className="miniterminos" > Contacto </a>
-        <a className="miniterminosprivacidad" > Privacidad </a>
+        <p className="miniterminos" > Términos y condiciones </p>
+        <p className="miniterminos" > Ayuda </p>
+        <p className="miniterminos" > Contacto </p>
+        <p className="miniterminosprivacidad" > Privacidad </p>
         </ul>
         <img  src="./img/logo.png" alt="logo"></img>
              <p className="fondo">Copyright © - Todos los derechos reservados</p>

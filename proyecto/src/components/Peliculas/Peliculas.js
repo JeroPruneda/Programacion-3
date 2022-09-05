@@ -1,12 +1,14 @@
 import React,{Component} from 'react'
 import PeliculasCard from '../PeliculasCard/PeliculasCard';
+import Search from '../Search/Search';
 
 
 class Peliculas extends Component {
     constructor(props){
         super(props)
         this.state={
-            data: []
+            data: [],
+            verMas: "hide"
             
         }
     }
@@ -20,6 +22,20 @@ class Peliculas extends Component {
         .catch(err => console.log(err)) 
     }
 
+    agregarFavoritos(id){
+        let agregar = this.state.data.filter(agrega => agrega.id !== id)
+        this.setState({
+            data: agregar
+        })
+
+    }
+
+    buscarPersonajes(nombre){
+        
+
+
+    }
+
 
   render() {
     return (
@@ -28,6 +44,7 @@ class Peliculas extends Component {
     <h3>PELÍCULAS POPULARES</h3>
 </div>
         <section className="card-container">
+            <Search />
             {
                 this.state.data.length > 0 ?
                     this.state.data.map((jose, idx) => 
@@ -37,6 +54,7 @@ class Peliculas extends Component {
                     image={jose.poster_path}
                     descripcion={jose.overview}
                     id = {jose.id}
+                    agregar = {(id) => this.agregarFavoritos(id)}
 
                     />):
                 <h1>Cargando..</h1>

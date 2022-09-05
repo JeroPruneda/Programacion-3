@@ -34,22 +34,15 @@ class PeliculasCard extends Component {
             <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" /> 
             <div className="textopolaroid">
               <p className="textopolaroidtitulo"> <Link to={`/detalle${this.props.id}`}> {this.props.name}</Link></p>
-              <p className={this.state.verMas}>{this.props.descripcion}</p> {/* este deberia solo aparecer si tocamos el Ver mas . y overveiw tampoco agarra nose porque*/}
-              <button onClick={()=>this.verMas()}>Ver más</button>
+             
+              <p className={this.state.verMas}>{this.props.descripcion}</p> {/* este deberia solo aparecer si tocamos el Ver mas */}
+              <button onClick={() => this.verMas()}>Ver más</button>
+              <button onClick={() => this.props.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button>
             </div>
         </article>
-    </a>
-</section>
+   </a>
    
-     
-            
-  
-              
-
-            
-            
-    
-  
+</section>
     )
   }
 }
