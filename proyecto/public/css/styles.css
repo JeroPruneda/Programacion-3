@@ -62,12 +62,12 @@ nav ul {
     }
     .search-form {
     height: 32px;
-    background-color: #fff;
+    background-color: rgb(204, 197, 197);
     overflow: hidden;
     }
     .search-text {
     font-size: 14px;
-    color: #ddd;
+    color: rgb(43, 34, 34);
     border-width: 0;
     background: transparent;
     }
