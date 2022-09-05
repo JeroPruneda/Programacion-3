@@ -12,8 +12,7 @@ function Header(){
             </ul>
 
             <div className='search-box'>
-                <Search />
-            
+                <Search /> 
             </div>
             
         <ul className="main-nav">

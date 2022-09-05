@@ -17,7 +17,7 @@ class Search extends Component{
     guardarCambios(event){
         this.setState({
             valor: event.target.value
-        }, () => this.props.search(this.state.valor)
+        }, /* () => this.props.search(this.state.valor) */
         
         )
 

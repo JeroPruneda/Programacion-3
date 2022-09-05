@@ -1,6 +1,5 @@
 import React,{Component} from 'react'
 import PeliculasCard from '../PeliculasCard/PeliculasCard';
-import Search from '../Search/Search';
 
 
 class Peliculas extends Component {
@@ -44,7 +43,6 @@ class Peliculas extends Component {
     <h3>PELÍCULAS POPULARES</h3>
 </div>
         <section className="card-container">
-            <Search />
             {
                 this.state.data.length > 0 ?
                     this.state.data.map((jose, idx) => 
