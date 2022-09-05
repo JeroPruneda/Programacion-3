@@ -76,10 +76,10 @@ border-width: 3px;
 border-style: solid;
 border-radius:35px;
 }
-
-    
-
-
+/* texto del detalle */
+.palabraDetalle{
+    color: rgb(231, 231, 231);
+}
 
 
 

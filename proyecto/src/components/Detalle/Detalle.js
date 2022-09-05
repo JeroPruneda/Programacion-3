@@ -24,11 +24,13 @@ class Detalle extends Component{
     render(){
         return(
             <>
-            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`}/>
-            <p>{this.state.detalle.title}</p>
-            <p>{this.state.detalle.vote_average}</p>
-            <p>{this.state.detalle.release_date}</p>
-            <p>{this.state.detalle.overview}</p>
+              <div className="textopolaroid">
+            <img className="imagenDetalle" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`}/>
+            <p className="palabraDetalle">{this.state.detalle.title}</p>
+            <p className="palabraDetalle">{this.state.detalle.vote_average}</p>
+            <p className="palabraDetalle">{this.state.detalle.release_date}</p>
+            <p className="palabraDetalle">{this.state.detalle.overview}</p>
+            </div>
             </>
             
         )
