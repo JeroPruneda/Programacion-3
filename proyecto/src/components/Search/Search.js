@@ -17,7 +17,7 @@ class Search extends Component{
     guardarCambios(event){
         this.setState({
             valor: event.target.value
-        }, () => this.props.search(this.state.valor)
+        }, /* () => this.props.search(this.state.valor) */
         
         )
 
@@ -26,7 +26,7 @@ class Search extends Component{
         return(
     <>
     <form onSubmit={(e) => this.evitarRefresh(e)}>
-    <input type={"text"} onChange= {(e) => this.guardarCambios(e)} value={this.state.valor}></input>
+    <input type={"text"} onChange= {(e) => this.guardarCambios(e)} value={this.state.valor} placeholder="Busqueda"></input>
     <button>Buscá</button>
     </form>
     
