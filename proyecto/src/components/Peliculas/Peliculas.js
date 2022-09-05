@@ -38,6 +38,7 @@ class Peliculas extends Component {
                     name={jose.title} 
                     image={jose.poster_path}
                     descripcion={jose.overview}
+                    
                     id = {jose.id}
                     agregar = {(id) => this.agregarFavoritos(id)}
                     

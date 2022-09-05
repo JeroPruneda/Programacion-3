@@ -1,0 +1,243 @@
+/*Generales*/
+body{
+    background-color:rgb(18, 19, 31);
+    color: rgb(213, 211, 211);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(213, 211, 211)
+}
+
+/*Header*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.5%;
+    align-items: center;
+}
+
+header input {
+    width: 60%;
+    max-width: 200px;
+}
+
+header img{
+    width: 15%;
+    border-radius: 8px;
+}
+
+header a{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+form {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 22.5vw;
+}
+
+form button {
+    margin-top: 4px;
+}
+
+/*Pagina Principal*/
+main{
+    width: 95vw;
+    margin: auto;
+    color: black;
+    background-color: black;
+    border-radius: 8px;
+    padding-bottom: 2px;
+    margin-bottom: 5%;
+}
+
+main a{
+    color: black;
+    font-weight: 500;
+}
+
+.portada {
+    padding-top: 2.5%;
+    display: flex;  
+}
+
+
+.portada img {
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+.portada .imgLaptop{
+    display: none;
+}
+
+.info {
+    background-color: rgb(191, 187, 187);
+    border-radius: 8px;
+    width: 95%;
+    margin: 1.5% auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genero {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.clasificacion {
+    height: fit-content;
+    border: 0.5px dashed black;
+    font-weight: 600;
+}
+
+.detalles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.detalles li{
+    margin-right: 1.5%;
+}
+
+.rating{
+    font-weight: 700;
+}
+
+.sinopsis{
+    text-align: center;
+}
+
+.botonFav{
+    background-color: black;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/*Footer*/
+.participantes{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: center;
+    margin-bottom: 2.5%;
+    align-items: center;
+}
+
+footer img{
+    width: 80px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.moovify{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.fondo{
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    color:grey;
+    margin-bottom: 0px;
+}
+
+@media(min-width: 1024px){
+
+/*Header Responsive*/
+header {
+    margin-bottom: 5%;
+}
+
+header a{
+    font-size: 26px;
+}
+
+header input {
+    height: 20px;
+}
+
+header img {
+    max-width: 150px;
+}
+
+form button{
+    height: 26px;
+}
+
+/*Principal Responsive*/
+main{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+
+.portada .imgMobile{
+    display: none;
+}
+
+.portada .imgLaptop{
+    display: block;
+}
+
+.portada {
+    background-color: black;
+    width: 40%;
+    padding: 2%;
+    border-radius: 8px;
+    margin-right: 2.5%;
+    max-width: fit-content;
+}
+
+.portada img{
+    max-width: 400px;
+    width: 300px;
+}
+
+.info{
+    font-size: 20px;
+    max-height: 40%;
+    max-width: 60%;
+}   
+
+h1{
+    font-size: 40px;
+}
+
+.titulopeli{
+    font-size:17px
+}
+}
