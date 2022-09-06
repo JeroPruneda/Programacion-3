@@ -56,9 +56,20 @@ nav ul {
 /* //el buscador */
 .search-box {
     position: relative;
-    width: 50%;
+    width: 30%;
     margin: 50px;
+    
     }
+    .container{
+        width: 80%;
+        height: 23px;
+        
+        }
+        .botton2{
+        border-width: 3px;
+        border-style: solid;
+        border-radius:35px;
+        }
 /* 
 botton */
 .botton{

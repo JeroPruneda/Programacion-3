@@ -25,10 +25,10 @@ class Search extends Component{
     render(){
         return(
     <>
-    <div>
+    <div >
     <form onSubmit={(e) => this.evitarRefresh(e)}>
-    <input  type={"text"} onChange= {(e) => this.guardarCambios(e)} value={this.state.valor}></input>
-    <button >Buscá</button>
+    <input  className="container" type={"text"} onChange= {(e) => this.guardarCambios(e)} value={this.state.valor}></input>
+    <button  className="botton2" >Buscá</button>
     </form>
     </div>
     </> 
