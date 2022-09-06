@@ -10,7 +10,7 @@ function Home() {
             <Peliculas />
             <br></br>
             <br></br>
-          <button className="botton"> <Link to ={`/verTodas`}> Ver Todas las Peliculas</Link></button>
+          <button className="botton" onClick={()=>this.traerMas()} > <Link to ={`/verTodas`}> Ver Todas las Peliculas</Link></button>
             <Series />
             <br></br>
             <br></br>

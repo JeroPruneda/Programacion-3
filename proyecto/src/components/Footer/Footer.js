@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css'
+import './styless.css'
 
 function Footer() {
   return (
