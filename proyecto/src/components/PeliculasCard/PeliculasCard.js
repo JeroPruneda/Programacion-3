@@ -73,7 +73,10 @@ class PeliculasCard extends Component {
               {
                 this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
+              
               <button onClick={() => this.verMas()}>Ver más</button>
+
+
               
             </div>
         </article>
