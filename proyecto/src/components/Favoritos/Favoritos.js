@@ -50,17 +50,17 @@ class Favoritos extends Component{
         return(
             <>
             <div className="palabra">
-            <h3>PELÍCULAS FAVORITAS</h3>
-            <p>hola</p>
+              <h3>PELÍCULAS FAVORITAS</h3>
+          
             {
               this.state.listo == true ?
-              <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrops[0].file_path}`} alt="funciona" /> 
+              <img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrops[3].file_path}`} alt="funciona" /> 
+             
               :
               <p>Cargando</p>
 
             }
             
-
             <button onClick={() => this.verMas()}>Ver más</button>
             </div>
             
