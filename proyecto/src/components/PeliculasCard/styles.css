@@ -27,12 +27,14 @@ body {
     grid-template-columns: repeat(2, 1fr);
     margin: 2%;
     gap: 10px;
+    box-shadow: 0rem 0rem 10px 8px rgb(255 255 255 / 25%);
 }
 
 
  a.apolaroid:hover {
-    opacity: 50%;
     text-decoration: none;
+    
+
 }
 
 .polaroid {
@@ -50,6 +52,7 @@ body {
     opacity: 60%;
     text-decoration-line: none;
     text-decoration:none;
+    
 }
 
 .imagen {
