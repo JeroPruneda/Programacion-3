@@ -24,11 +24,10 @@ class DetalleSerie extends Component{
     }
     render(){
         return(
-            
-            <main> 
+          <>
+        <main> 
            <div class="portada">
                 <img class="imgLaptop" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`} alt=""></img>
-                
             </div>
             <div class="info">
                 <h1>{this.state.detalle.title}</h1>                    
@@ -40,8 +39,7 @@ class DetalleSerie extends Component{
                 
             </div>
         </main>
-            
-            
+        </>
         )
     } 
 }

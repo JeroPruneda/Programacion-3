@@ -31,7 +31,7 @@ class SeriesCard extends Component {
         <article className="polaroid">
             <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt=""></img>
             <div className="textopolaroid">
-                <p className="textopolaroidtitulo"> <Link to={`/detalle/${this.props.id}`}> {this.props.name}</Link> </p>
+                <p className="textopolaroidtitulo"> <Link to={`/detalleSerie/${this.props.id}`}> {this.props.name}</Link> </p>
                 <p className={this.state.verMas}>{this.props.descripcion}</p> {/* este deberia solo aparecer si tocamos el Ver mas */}
               <button onClick={() => this.verMas()}>Ver más</button>
               <button onClick={() => this.props.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button>

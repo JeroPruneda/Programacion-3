@@ -21,16 +21,6 @@ class VerTodas extends Component {
         }))
         .catch(err => console.log(err)) 
     }
-    traerMas(){
-        //Traer la siguiente página de personajes
-        fetch(this.state.nextUrl)
-            .then( res => res.json())
-            .then( data => this.setState({
-                peliculas: data.results.concat(this.state.peliculas),
-                nextUrl: data.info.next
-            }))
-            .catch()
-    }
 
   render() {
     return (
