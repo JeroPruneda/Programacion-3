@@ -33,10 +33,7 @@ class DetalleSerie extends Component{
             <div class="info">
                 <h1>{this.state.detalle.title}</h1>                    
                 <ul class="detalles">
-                <li class="fechaDeEstreno">{this.state.detalle.release_date}</li>
-                
-                
-            
+                    <li class="fechaDeEstreno">{this.state.detalle.release_date}</li>
                 </ul>
                 <p class="rating">{this.state.detalle.vote_average}</p>
                 <p class="sinopsis">{this.state.detalle.overview}</p>

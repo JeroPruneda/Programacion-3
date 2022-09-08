@@ -4,12 +4,13 @@ import Search from "../Search/Search";
 
 
 function Header(){
-
+  
     return(
+        
     <nav>
           <ul className="user">
-            <li><img src="./img/logo.png" alt="" /></li>
-            </ul>
+            <li> <Link to = {`/`}> <img src="./img/logo.png" alt="logo" /> </Link></li>
+         </ul>
 
             <div className='search-box'>
                 <Search /> 

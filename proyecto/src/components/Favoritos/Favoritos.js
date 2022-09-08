@@ -6,7 +6,7 @@ class Favoritos extends Component{
         super(props);
         this.state = {
           verMas: "hide",
-          peliculas: [],
+          data: [],
         }
     }
 
@@ -14,21 +14,18 @@ class Favoritos extends Component{
       let storage = localStorage.getItem("favoritos")
       if(storage !== null){
         let parsedStorage = JSON.parse(storage)
-
         Promise.all(
-          parsedStorage.map(fav => {
+          parsedStorage.map((fav) => {
             return(
-              fetch(`https://image.tmdb.org/t/p/w342/${fav}`)
+              fetch(`https://image.tmdb.org/t/p/w342/${fav}?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
               .then(resp => resp.json())
-              .then(data => console.log(data))
-
+              .then(data => data)
+              .catch(e => console.log(e))
           )}
         ))
     }
   }
     
-
-
     verMas(){
         if(this.state.verMas === 'show'){
           this.setState({
@@ -51,6 +48,8 @@ class Favoritos extends Component{
             <div className="palabra">
             <h3>PELÍCULAS FAVORITAS</h3>
             <p>hola</p>
+            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="funciona" /> 
+
             <button onClick={() => this.verMas()}>Ver más</button>
             </div>
             

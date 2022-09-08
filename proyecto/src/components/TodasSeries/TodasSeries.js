@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-
+import SeriesCard from '../SeriesCard/SeriesCard';
 
 
 class TodasSeries extends Component {
@@ -10,6 +10,7 @@ class TodasSeries extends Component {
             
         }
     }
+   
 
     componentDidMount(){
         fetch('https://api.themoviedb.org/3/tv/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c')
@@ -24,9 +25,23 @@ class TodasSeries extends Component {
   render() {
     return (
         <>
-    <div className="palabra">
-        <h3>ACA ESTAN TODAS LAS SERIES</h3>
-    </div>     
+        <div className="palabra">
+    <h3>TODAS LAS SERIES</h3>
+</div>
+        <section className="card-container">
+            {
+                this.state.data.length > 0 ?
+                    this.state.data.map((personaje, idx) => 
+                    <SeriesCard 
+                    key={personaje + idx} 
+                    name={personaje.name} 
+                    image={personaje.poster_path}
+                    descripcion={personaje.overview}
+                    id = {personaje.id}
+                    />):
+                <h1>Cargando..</h1>
+            }
+      </section>
         </>
     )
   }
