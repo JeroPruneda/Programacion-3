@@ -29,7 +29,7 @@ class VerTodas extends Component {
             <h3>Todas las peliculas</h3>
         </div>
         <section className="card-container">
-           
+        
             {
                 this.state.data.length > 0 ?
                     this.state.data.map((jose, idx) => 
