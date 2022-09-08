@@ -1,5 +1,6 @@
 /* footer */
 footer {
+    display: grid;
     background-color: #312b2b;
     text-align: center;
     padding: 40px 0;

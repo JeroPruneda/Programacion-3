@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import Peliculas from "../Peliculas/Peliculas";
 import Series from "../Series/Series";
+import verTodas from "../VerTodas/VerTodas";
 import {Link} from "react-router-dom"
 
-
 function Home() {
+   
     return (
         <>
             <Peliculas />
