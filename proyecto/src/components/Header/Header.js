@@ -8,21 +8,16 @@ function Header(){
     return(
         
     <nav>
-          <ul className="user">
+        <ul className="user">
             <li> <Link to = {`/`}> <img src="./img/logo.png" alt="logo" /> </Link></li>
-         </ul>
-
-            <div className='search-box'>
+        </ul>
+        <div className='search-box'>
                 <Search /> 
-            </div>
-            
+        </div>
         <ul className="main-nav">
             <li> <Link to ={`/`}>Home</Link></li>
             <li> <Link to ={`/favoritos`}>Favoritos</Link></li>
         </ul>
-        
-     
-    
      </nav>
     )
 }

@@ -8,14 +8,16 @@ function Home() {
    
     return (
         <>
+        
             <Peliculas />
             <br></br>
             <br></br>
-          <button className="botton" onClick={()=>this.traerMas()} > <Link to ={`/verTodas`}> Ver Todas las Peliculas</Link></button>
+           <Link to ={`/verTodas`}><button className="botton" onClick={()=>this.traerMas()} > Ver Todas las Peliculas</button></Link>
             <Series />
             <br></br>
             <br></br>
-          <button className="botton"> <Link to ={`/TodasSeries`}> Ver Todas las Series</Link></button>
+           <Link to ={`/TodasSeries`}><button className="botton"> Ver Todas las Series</button></Link>
+           
             </>
 
     )

@@ -1,6 +1,7 @@
 /*Generales*/
 body{
-    background-color:rgb(18, 19, 31);
+    
+     background-color:rgb(18, 19, 31); 
     color: rgb(213, 211, 211);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
