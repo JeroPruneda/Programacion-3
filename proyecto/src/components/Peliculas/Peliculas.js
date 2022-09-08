@@ -17,7 +17,8 @@ class Peliculas extends Component {
         fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=7a176cc95147be6e695be2faf0e8ff9c')
         .then(resp => resp.json())
         .then(data => this.setState({
-            data: data.results
+            data: data.results.slice(0,12) 
+            
         }))
         .catch(err => console.log(err)) 
     }
