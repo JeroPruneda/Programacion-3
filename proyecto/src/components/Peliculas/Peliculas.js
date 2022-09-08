@@ -11,6 +11,16 @@ class Peliculas extends Component {
             
         }
     }
+    traerMas(){
+        //Traer la siguiente página de personajes
+        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c')
+            .then( res => res.json())
+            .then( data => this.setState({
+                peliculas: data.results.concat(this.state.peliculas),
+                nextUrl: data.info.next
+            }))
+            .catch()
+    }
 
     componentDidMount(){
         fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c')
@@ -21,6 +31,19 @@ class Peliculas extends Component {
         .catch(err => console.log(err)) 
     }
 
+    agregarFavoritos(id){
+        let agregar = this.state.data.filter(agrega => agrega.id !== id)
+        this.setState({
+            data: agregar
+        })
+
+    }
+
+    buscarPersonajes(nombre){
+        
+
+
+    }
 
 
   render() {
@@ -38,10 +61,10 @@ class Peliculas extends Component {
                     name={jose.title} 
                     image={jose.poster_path}
                     descripcion={jose.overview}
-                    
+                    fecha={jose.first_air_date}
                     id = {jose.id}
                     agregar = {(id) => this.agregarFavoritos(id)}
-                    
+
                     />):
                 <h1>Cargando..</h1>
             }
