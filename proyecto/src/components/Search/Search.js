@@ -11,16 +11,18 @@ class Search extends Component{
 
     evitarRefresh(event){
         event.preventDefault()
+        console.log(event)
 
     }
 
     guardarCambios(event){
+        
         this.setState({
             valor: event.target.value
-        }, /* () => this.props.search(this.state.valor) */
+        },  () => this.props.filtrar(this.state.valor) 
         
         )
-
+        console.log(this.state.valor)
     }
     render(){
         return(
