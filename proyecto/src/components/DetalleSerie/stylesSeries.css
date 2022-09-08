@@ -1,243 +1,211 @@
-/*Generales*/
-body{
-    background-color:rgb(18, 19, 31);
-    color: rgb(213, 211, 211);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Detalle de las Series */
+
+* {
+    box-sizing: border-box;
 }
 
-li {
-    list-style-type: none;
-}
-
-ul {
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(213, 211, 211)
+/*Mobile*/
+body {
+    background-color: white;
+    margin: 0px;
 }
 
 /*Header*/
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 2.5%;
-    align-items: center;
-}
 
-header input {
-    width: 60%;
-    max-width: 200px;
-}
-
-header img{
-    width: 15%;
-    border-radius: 8px;
-}
-
-header a{
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-}
-
-form {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 22.5vw;
-}
-
-form button {
-    margin-top: 4px;
-}
-
-/*Pagina Principal*/
-main{
-    width: 95vw;
-    margin: auto;
-    color: black;
+.header {
     background-color: black;
-    border-radius: 8px;
-    padding-bottom: 2px;
-    margin-bottom: 5%;
-}
-
-main a{
-    color: black;
-    font-weight: 500;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .portada {
-    padding-top: 2.5%;
-    display: flex;  
-}
-
-
-.portada img {
-    width: 70%;
-    display: block;
-    margin: auto;
-}
-
-.portada .imgLaptop{
-    display: none;
-}
-
-.info {
-    background-color: rgb(191, 187, 187);
-    border-radius: 8px;
-    width: 95%;
-    margin: 1.5% auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.genero {
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-}
-
-.clasificacion {
-    height: fit-content;
-    border: 0.5px dashed black;
-    font-weight: 600;
-}
-
-.detalles{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding:1%;
     align-items: center;
-    width: 100%;
+} 
+
+.eye {
+    margin: 3%;
+    margin-left: 3%;
 }
 
-.detalles li{
-    margin-right: 1.5%;
-}
 
-.rating{
-    font-weight: 700;
-}
-
-.sinopsis{
-    text-align: center;
-}
-
-.botonFav{
-    background-color: black;
-    color: white;
-    margin-bottom: 5px;
-}
-
-/*Footer*/
-.participantes{
-    color: white;
-    text-align: center;
-    font-size: 15px;
-}
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    justify-content: center;
-    margin-bottom: 2.5%;
-    align-items: center;
-}
-
-footer img{
-    width: 80px;
-    margin-left: 20px;
-    border-radius: 8px;
-}
-
-.moovify{
+.botongeneros {
+    text-align: right;
+    color: #A6A292;
+    font-size: 18px;
     text-decoration: none;
-    color: white;
-    font-size: 30px;
+    font-family: 'Arapey', serif;
+    margin: 3%;
 }
-.fondo{
+
+.botongeneros:hover {
+    opacity:50%;
+}
+
+
+.fotoeye {
+    width: 30%;
+}
+
+.fotoeye:hover {
+    opacity:50%;
+}
+
+/*Main*/
+.contenido {
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    justify-content: space-around;
+}
+
+.imagen {
+    margin-top:none;
+    width: 90%;
+    justify-content: center;
+    height: inherit;
     width: 100%;
-    font-size: 15px;
-    text-align: center;
-    color:grey;
-    margin-bottom: 0px;
 }
 
-@media(min-width: 1024px){
 
-/*Header Responsive*/
-header {
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    opacity:50%
+}
+
+h3.titulo {
+    font-family: 'Arapey', serif;
+    color:black;
+    font-size: 60px;
+    margin-bottom:3%;
+    margin-top: 3%;
+    margin: 1%;
+}
+
+.trama {
+    font-family: 'Arapey', serif;
+    color:black;
+    font-size:15px;
+    margin: 1%;
+    margin-top:5%;
+    margin-bottom: 3%;
+}
+
+.button {
+    margin: 1%;
+    background-color: black;
+    font-family: 'Arapey', serif;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+
+.button:hover {
+    opacity:50%;
+    text-decoration: none;
+}
+
+.reviews {
+    font-size: 15px;
+    margin-top: 2%;
+}
+    
+.informacion {
+    line-height: 150%;
+    font-family: 'Arapey', serif;
+    color:black;
+    font-size:15px;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0%;
+    margin: 1%;
+    margin-top:2%;
     margin-bottom: 5%;
 }
 
-header a{
-    font-size: 26px;
+
+/*Tablet*/
+@media (min-width:576px) {
+    .botongeneros {
+       font-size: 35px;
+    }
+
+    .trama {
+        font-size:20px;
+    }
+
+    .informacion{
+        font-size: 20px;
+    }
+
+    .reviews {
+        font-size: 20px;   
+    }
 }
 
-header input {
-    height: 20px;
-}
+/*Desktop*/
+@media (min-width:1024px){
 
-header img {
-    max-width: 150px;
-}
+    /*Header*/
 
-form button{
-    height: 26px;
-}
+    .header {
+        
+        background-size: cover;
+    }
 
-/*Principal Responsive*/
-main{
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-}
+    a.eye {
+        margin: 1%;
+        margin-left: 1%;
+        width: 50%;
+        margin-bottom: 2.5%;
+    }
 
-.portada .imgMobile{
-    display: none;
-}
+    .botongeneros {
+        font-size: 40px;
+        margin: 1%;
+        margin-bottom: 2.5%;
+    }
 
-.portada .imgLaptop{
-    display: block;
-}
+    /*Main*/
+    .contenido {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+        height: 50em;
+    }
 
-.portada {
-    background-color: black;
-    width: 40%;
-    padding: 2%;
-    border-radius: 8px;
-    margin-right: 2.5%;
-    max-width: fit-content;
-}
+    .titulo {
+        font-size: 80px;
+    }
 
-.portada img{
-    max-width: 400px;
-    width: 300px;
-}
+    .trama {
+        font-size:25px;
+        margin-bottom: 5%;
+    }
 
-.info{
-    font-size: 20px;
-    max-height: 40%;
-    max-width: 60%;
-}   
+    .button{
+        font-size: 20px;
+    }
 
-h1{
-    font-size: 40px;
-}
+    .informacion {
+        font-size:25px;
+        margin-top: 5%;
+    }
 
-.titulopeli{
-    font-size:17px
-}
+
+    .reviews {
+        font-size: 25px;
+    }
+
 }

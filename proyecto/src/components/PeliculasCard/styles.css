@@ -73,7 +73,7 @@ a,a:hover {
 
 .textopolaroid {
     font-family: 'Arapey', serif;
-    font-size: 20px;
+    font-size: 35px;
     margin-bottom: 10px;
     margin-left: 10px;
     text-decoration-line: none;
@@ -105,10 +105,115 @@ a,a:hover {
     
 .card-container{
     display: grid;
-        grid-template-columns: repeat(6,16%);
+        grid-template-columns: repeat(2,46%);
         gap: 1%;
-        margin-right:1%;
-        margin-left: 1%;
+        margin-right:50px;
+        margin-left: 50px;
         margin-bottom: 2%;
+        text-align: center;
+}
+/* Desktop */
+/* Desktop */
+
+@media (min-width: 1024px){
+
+    a.eye {
+        margin: 1%;
+        margin-left: 1%;
+        width: 70%;
+    }
+    
+    
+    .botongeneros {
+        font-size: 40px;
+    }
+
+    .botonfavoritos{
+        font-size: 40px;
+    }
+    
+    .title {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
+    h3 {
+        margin: 1%;
+    }
+    
+    .subtitulo {
+        display: grid;
+        margin-top: 0em;
+        margin-bottom: 15%;
+        margin-top: 5%;
+    
+    }
+
+    .palabra {
+    margin-left: 1%;
+    font-size: 25px;
+        
+    }
+    
+    
+    
+    /*Header Responsive*/
+header {
+    margin-bottom: 5%;
+}
+
+header a{
+    font-size: 26px;
+}
+
+header input {
+    height: 20px;
+}
+
+header img {
+    max-width: 150px;
+}
+
+form button{
+    height: 26px;
+}
+
+    .peliculas, .series ,.masvisto{   
+        margin: 30px;       
+        display: grid; 
+        grid-template-columns: repeat(6,16%);
+        margin-right:50px;
+        margin-left:50px;
+    }
+    .card-container{
+        display: grid;
+            grid-template-columns: repeat(6,16%);
+            gap: 1%;
+            margin-right:1%;
+            margin-left: 1%;
+            margin-bottom: 2%;
+            text-align: center;
+    }
+    footer img{
+        width: 80px;
+       
+    }
+    .moovify{
+        width: auto;
+    }
+    .textopolaroid {
+        font-family: 'Arapey', serif;
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        text-decoration-line: none;
+    }
+    .titulopeli{
+        font-size:17px
+    }
+    .seleccionados{
+        text-align: center;
+        width: 400px;
+    }
 }
 
