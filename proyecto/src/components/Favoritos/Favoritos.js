@@ -31,8 +31,6 @@ class Favoritos extends Component{
         .catch(e => console.log(e)) 
     }
   }
-
-  
     
     verMas(){
         if(this.state.verMas === 'show'){
@@ -60,7 +58,7 @@ class Favoritos extends Component{
               <p>Cargando</p>
 
             }
-            
+            <p className={this.state.verMas}>{this.props.descripcion}</p>
             <button onClick={() => this.verMas()}>Ver más</button>
             </div>
             

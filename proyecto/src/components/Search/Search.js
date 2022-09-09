@@ -9,34 +9,27 @@ class Search extends Component{
         }
     }
 
-    evitarRefresh(event){
+    eSubmit(event){
         event.preventDefault()
-        console.log(event)
-
     }
 
-    guardarCambios(event){
-        
+    controlarCambios(event){
         this.setState({
             valor: event.target.value
-        },  () => this.props.filtrar(this.state.valor) 
-        
+        }, () => this.props.buscar(this.state.valor)
         )
-        console.log(this.state.valor)
     }
     render(){
         return(
-    <>
-    <div >
-    <form onSubmit={(e) => this.evitarRefresh(e)}>
-    <input  className="container" type={"text"} onChange= {(e) => this.guardarCambios(e)} value={this.state.valor}></input>
-    <button  className="botton2" >Buscá</button>
-    </form>
-    </div>
-    </> 
+        <>
+            <form onSubmit={(event) => this.eSubmit(event)}>
+                <input className="container" type="text" onChange= {(event) => this.controlarCambios(event)} value={this.state.valor}></input>
+                <button type="submit"> Buscar</button>
+            </form>
+            
+        </> 
         )
     }
-
 
 }
 export default Search

@@ -33,17 +33,6 @@ class Peliculas extends Component {
         .catch(err => console.log(err)) 
     }
     
-    // BuscarPeliculas(this.name){
-    //     let buscador = `https://api.themoviedb.org/3/search/movie?api_key=0002daaf86f106b6b8226fa0a789628f&language=en-US&page=1&include_adult=false&query=${this.name}`;
-    //     fetch(buscador)
-    //     .then(resp => resp.json())
-    //     .then(data => this.setState({
-    //         peliculas :data.results
-    //     }))
-    //     .catch(err => console.log(err)) 
-    // } 
-    //PROBANDO BUSCADOR COMO LO HIZO EL 
-
     agregarFavoritos(id){
         let agregar = this.state.data.filter(agrega => agrega.id !== id)
         this.setState({
@@ -52,12 +41,7 @@ class Peliculas extends Component {
 
     }
 
-    buscarPersonajes(nombre){
-        
-
-
-    }
-
+    
 
   render() {
     return (
@@ -66,7 +50,6 @@ class Peliculas extends Component {
             <h3>PELÍCULAS POPULARES</h3>
         </div>
         <section className="card-container">
-            {/* <Search filtrar ={(name)=> this.BuscarPeliculas(this.name)}/> EL LO HABIA HECHO ACA*/}
             {
                 this.state.data.length > 0 ?
                     this.state.data.map((jose, idx) => 
