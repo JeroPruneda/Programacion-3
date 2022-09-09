@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom"
+import '../Favoritos/styles.css'
 
 class Favoritos extends Component{
     constructor(props){
@@ -52,12 +53,34 @@ class Favoritos extends Component{
           
             {
               this.state.listo == true ?
-              <img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrops[3].file_path}`} alt="funciona" /> 
+              <section className='peliculaspopulares'>
+    <a className="apolaroid">
+        <article className="polaroid">
+        <img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrops[3].file_path}`} alt="funciona" /> 
+            <div className="textopolaroid">
+              <p className="textopolaroidtitulo"> <Link to={`/detalle/${this.props.id}`}> {this.props.name}</Link></p>
+             
+              <p className={this.state.verMas}>{this.props.descripcion}</p> 
+              {
+                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
+              }
+              
+              <button onClick={() => this.verMas()}>Ver más</button>
+
+
+              
+            </div>
+        </article>
+   </a>
+   
+</section>
+             
              
               :
               <p>Cargando</p>
 
             }
+
             <p className={this.state.verMas}>{this.props.descripcion}</p>
             <button onClick={() => this.verMas()}>Ver más</button>
             </div>
