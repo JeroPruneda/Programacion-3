@@ -1,11 +1,6 @@
 import React, {Component} from "react";
-<<<<<<< HEAD
-import {Link} from "react-router-dom";
-import "./styles.css"
-=======
 import {Link} from "react-router-dom"
 import '../Favoritos/styles.css'
->>>>>>> 9bb8c259ec60c5705dd6459835b0abedb833990a
 
 class Favoritos extends Component{
     constructor(props){
