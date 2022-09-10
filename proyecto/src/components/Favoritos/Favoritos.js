@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import "./styles.css"
 
 class Favoritos extends Component{
     constructor(props){
@@ -44,6 +45,18 @@ class Favoritos extends Component{
         }
       }
 
+      removeFavoritos(id){
+        let fav = localStorage.getItem("favoritos")
+        let parsed = JSON.parse(fav)
+        let filtro = parsed.filter(elm => elm !== id)
+        let string = JSON.stringify(filtro)
+        localStorage.setItem("favoritos", string)
+    
+        this.setState({
+          favoritos: false
+        })
+      }
+
     render(){
         return(
             <>
@@ -51,17 +64,20 @@ class Favoritos extends Component{
               <h3>PELÍCULAS FAVORITAS</h3>
           
             {
-              this.state.listo == true ?
-              <img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrops[3].file_path}`} alt="funciona" /> 
+              this.state.listo === true ?
+              <Link to={`/detalle/${this.state.data.id}`}><img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrops[3].file_path}`} alt="funciona" /> </Link>
              
               :
               <p>Cargando</p>
 
             }
-            <p className={this.state.verMas}>{this.props.descripcion}</p>
+
+            <p className={this.state.verMas}>{this.state.data.id}</p>
+            {
+                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.state.data.id)}> Sacar de Favoritos</button>: "" 
+            }
             <button onClick={() => this.verMas()}>Ver más</button>
             </div>
-            
             </>
         )
     }

@@ -12,8 +12,8 @@ class Header extends Component{
         }
     }
 
-    buscarPeliculas(title){
-        fetch(`https://api.themoviedb.org/3/search/${title}?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
+    buscarPeliculas(nombre){
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=0002daaf86f106b6b8226fa0a789628f&language=en-US&page=1&include_adult=false&query=${nombre}`)
         .then(resp => resp.json())
         .then(data => this.setState({
             data: data.results,
@@ -29,7 +29,7 @@ class Header extends Component{
                     <li> <Link to = {`/`}> <img src="./img/logo.png" alt="logo" /> </Link></li>
                 </ul>
                 <div className='search-box'>
-                        <Search buscar ={(title) => this.buscarPeliculas(title)}/> 
+                        <Search buscar ={(nombre) => this.buscarPeliculas(nombre)}/> 
                 </div>
                 <ul className="main-nav">
                     <li> <Link to ={`/`}>Home</Link></li>

@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import PeliculasCard from '../PeliculasCard/PeliculasCard';
-import Search from "../Search/Search";
+
 
 
 class Peliculas extends Component {

@@ -6,11 +6,11 @@ class Detalle extends Component{
         super(props);
         this.state = {
             detalle: {},
+
             
         }
     } 
     componentDidMount(){
-        console.log("hola");
         fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
         .then(resp => resp.json())
         .then(data => 
@@ -22,6 +22,8 @@ class Detalle extends Component{
         .catch(error => console.log(error))
     
     }
+
+
     render(){
         return(
         <>
