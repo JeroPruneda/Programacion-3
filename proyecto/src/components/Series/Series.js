@@ -19,6 +19,11 @@ class Series extends Component {
         }))
         .catch(err => console.log(err)) 
     }
+    agregarFavoritos(id){
+        let agregar = this.state.data.filter(agrega => agrega.id !== id)
+        this.setState({
+            data: agregar
+        })
 
     agregarFavoritos(id){
         let agregar = this.state.data.filter(agrega => agrega.id !== id)
@@ -26,7 +31,7 @@ class Series extends Component {
             data: agregar
         })
 
-    }
+    }}
 
 
   render() {

@@ -61,13 +61,16 @@ class Favoritos extends Component{
       render(){
         return(
             <div>
+              <div className="palabra">
+               <h3>Tus Peliculas Favoritas</h3>
+                </div>
                 {
                     this.state.dataPelis.length > 0 ?
                     this.state.dataPelis.map((elm, idx) =>
         <section className="card-container">
-          
               <a className="apolaroid">
                 <article className="polaroid">
+                
                       <div className="textopolaroid">
                         <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.title}</p>
                             <Link to={`/detalle/${this.props.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
@@ -84,11 +87,16 @@ class Favoritos extends Component{
                      )
                     : 'Cargando..'
                 }
+                    <div className="palabra">
+               <h3>Tus Series Favoritas</h3>
+                </div>
             </div>
         )
   
         
     }
+
+
 }
 
 export default Favoritos
