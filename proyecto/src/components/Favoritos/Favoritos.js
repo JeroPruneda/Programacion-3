@@ -70,12 +70,12 @@ class Favoritos extends Component{
                 <article className="polaroid">
                       <div className="textopolaroid">
                         <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.original_title}</p>
-                            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> 
+                            <Link to={`/detalle/${this.props.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
                                 <p className={this.state.verMas} >{elm.overview}</p>
                      <br></br>
                                         <button onClick={() => this.verMas()}>Ver más</button>
                      <br></br>
-                                    <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
+                            <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
                      </div>
                      </article>
                      </a>
