@@ -13,12 +13,10 @@ class Detalle extends Component{
     componentDidMount(){
         fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
         .then(resp => resp.json())
-        .then(data => 
-              this.setState
-            ({
+        .then(data => {console.log(data)
+              this.setState({
             detalle: data,
-            
-        })  )
+        })  })
         .catch(error => console.log(error))
     
     }
@@ -30,16 +28,16 @@ class Detalle extends Component{
         
         <main> 
            <div class="portada">
-                <img class="imgLaptop" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`} alt=""></img>
-                <img class="imgMobile" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`} alt=""></img>
+                <img className="imgLaptop" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`} alt=""></img>
             </div>
-            <div class="info">
+            <div className="info">
                 <h1>{this.state.detalle.title}</h1>                    
-                <ul class="detalles">
-                    <li class="fechaDeEstreno">{this.state.detalle.release_date}</li>
+                <ul className="detalles">
+                    <li className="fechaDeEstreno">{this.state.detalle.release_date}</li>
+                    <li className="fechaDeEstreno"> {this.state.detalle.genres}</li>
                 </ul>
-                <p class="rating">{this.state.detalle.vote_average}</p>
-                <p class="sinopsis">{this.state.detalle.overview}</p>
+                <p className="rating">{this.state.detalle.vote_average}</p>
+                <p className="sinopsis">{this.state.detalle.overview}</p>
                 
             </div>
         </main>
