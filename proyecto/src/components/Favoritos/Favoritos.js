@@ -7,7 +7,7 @@ class Favoritos extends Component{
         super(props);
         this.state = {
           verMas: "hide",
-          data: [],
+          dataPelis: [],
           listo: false
         }
     }
@@ -22,16 +22,17 @@ class Favoritos extends Component{
             return(
               fetch(`https://api.themoviedb.org/3/movie/${fav}?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
               .then(resp => resp.json())
-              .then(data => {console.log(data)
-                 this.setState({
-                data: data,
-                listo: true
-              })}))
-            })
-        )
-        .catch(e => console.log(e)) 
+              .then(data => data )
+              
+          )
+          })
+        ).then(data =>this.setState({
+          dataPelis: data
+      }))
+    
+        .catch(err => console.log(err))
+      }
     }
-  }
     
     verMas(){
         if(this.state.verMas === 'show'){
@@ -57,29 +58,36 @@ class Favoritos extends Component{
         })
       }
 
-    render(){
+      render(){
         return(
-            <>
-            <div className="palabra">
-              <h3>PELÍCULAS FAVORITAS</h3>
-          
-            {
-              this.state.listo === true ?
-              <Link to={`/detalle/${this.state.data.id}`}><img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrop_path}`} alt="funciona" /> </Link>
-              :
-              <p>Cargando</p>
-
-            }
-            <p className={this.state.verMas}>{this.state.data.title}</p>
-
-            <p className={this.state.verMas}>{this.state.data.overview}</p>
-            {
-              this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.state.data.id)}> Sacar de Favoritos</button>: "" 
-            }
-            <button onClick={() => this.verMas()}>Ver más</button>
+            <div>
+                {
+                    this.state.dataPelis.length > 0 ?
+                    this.state.dataPelis.map((elm, idx) =>
+                    <>
+                    <section className='peliculaspopulares'>
+                    <a className="apolaroid">
+                    <article className="polaroid">
+                    <div className="textopolaroid">
+                     <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.original_title}</p>
+                     <img  src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> 
+                     <p className={this.state.verMas} >{elm.overview}</p>
+                     {/* {
+                    this.state.favoritos ? <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(elm.id)} > Agregar a Favoritos</button> 
+                    } */}
+                     <button onClick={() => this.verMas()}>Ver más</button>
+                     </div>
+                     </article>
+                     </a>
+                     </section>
+                     </>
+                     )
+                    : 'Cargando..'
+                }
             </div>
-            </>
         )
+  
+        
     }
 }
 
