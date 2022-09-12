@@ -81,9 +81,10 @@ main a{
 
 
 .portada img {
-    width: 70%;
+    width: 200%;
     display: block;
     margin: auto;
+    height: 1000px;
 }
 
 .portada .imgLaptop{
@@ -208,6 +209,11 @@ main{
 
 .portada .imgMobile{
     display: none;
+
+}
+
+.imgMobile{
+    text-align: center;
 }
 
 .portada .imgLaptop{

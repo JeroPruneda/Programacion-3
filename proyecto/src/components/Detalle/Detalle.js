@@ -31,6 +31,7 @@ class Detalle extends Component{
         <main> 
            <div class="portada">
                 <img class="imgLaptop" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`} alt=""></img>
+                <img class="imgMobile" src={`https://image.tmdb.org/t/p/w342/${this.state.detalle.poster_path}`} alt=""></img>
             </div>
             <div class="info">
                 <h1>{this.state.detalle.title}</h1>                    
