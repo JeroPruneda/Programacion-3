@@ -34,7 +34,7 @@ class Detalle extends Component{
                 <h1>{this.state.detalle.title}</h1>                    
                 <ul className="detalles">
                     <li className="fechaDeEstreno">{this.state.detalle.release_date}</li>
-                    <li className="fechaDeEstreno"> {this.state.detalle.genres}</li>
+                    {/* <li className="fechaDeEstreno"> {this.state.detalle.genres}</li> */}
                 </ul>
                 <p className="rating">{this.state.detalle.vote_average}</p>
                 <p className="sinopsis">{this.state.detalle.overview}</p>
