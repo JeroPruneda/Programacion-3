@@ -11,7 +11,6 @@ class Series extends Component {
         }
     }
    
-
     componentDidMount(){
         fetch('https://api.themoviedb.org/3/tv/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c')
         .then(resp => resp.json())
@@ -19,6 +18,14 @@ class Series extends Component {
             data: data.results.slice(0,12)
         }))
         .catch(err => console.log(err)) 
+    }
+
+    agregarFavoritos(id){
+        let agregar = this.state.data.filter(agrega => agrega.id !== id)
+        this.setState({
+            data: agregar
+        })
+
     }
 
 
@@ -38,6 +45,7 @@ class Series extends Component {
                     image={personaje.poster_path}
                     descripcion={personaje.overview}
                     id = {personaje.id}
+                    agregar = {(id) => this.agregarFavoritos(id)}
                     />):
                 <h1>Cargando..</h1>
             }

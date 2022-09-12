@@ -69,7 +69,7 @@ class Favoritos extends Component{
               <a className="apolaroid">
                 <article className="polaroid">
                       <div className="textopolaroid">
-                        <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.original_title}</p>
+                        <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.title}</p>
                             <Link to={`/detalle/${this.props.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
                                 <p className={this.state.verMas} >{elm.overview}</p>
                      <br></br>
