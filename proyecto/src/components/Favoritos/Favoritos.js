@@ -16,11 +16,11 @@ class Favoritos extends Component{
       let storage = localStorage.getItem("favoritos")
       if(storage !== null){
         let parsedStorage = JSON.parse(storage)
-       
+      
        Promise.all(
           parsedStorage.map((fav) => {
             return(
-              fetch(`https://api.themoviedb.org/3/movie/${fav}/images?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
+              fetch(`https://api.themoviedb.org/3/movie/${fav}?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
               .then(resp => resp.json())
               .then(data => {console.log(data)
                  this.setState({
@@ -65,16 +65,16 @@ class Favoritos extends Component{
           
             {
               this.state.listo === true ?
-              <Link to={`/detalle/${this.state.data.id}`}><img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrops[3].file_path}`} alt="funciona" /> </Link>
-             
+              <Link to={`/detalle/${this.state.data.id}`}><img  src={`https://image.tmdb.org/t/p/w342/${this.state.data.backdrop_path}`} alt="funciona" /> </Link>
               :
               <p>Cargando</p>
 
             }
+            <p className={this.state.verMas}>{this.state.data.title}</p>
 
-            <p className={this.state.verMas}>{this.state.data.id}</p>
+            <p className={this.state.verMas}>{this.state.data.overview}</p>
             {
-                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.state.data.id)}> Sacar de Favoritos</button>: "" 
+              this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.state.data.id)}> Sacar de Favoritos</button>: "" 
             }
             <button onClick={() => this.verMas()}>Ver más</button>
             </div>

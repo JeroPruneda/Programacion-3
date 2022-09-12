@@ -8,7 +8,6 @@ class Search extends Component{
 
         }
     }
-
     eSubmit(event){
         event.preventDefault()
     }
@@ -26,7 +25,6 @@ class Search extends Component{
                 <input className="container" type="text" onChange= {(event) => this.controlarCambios(event)} value={this.state.valor}></input>
                 <button type="submit"> Buscar</button>
             </form>
-            
         </> 
         )
     }
