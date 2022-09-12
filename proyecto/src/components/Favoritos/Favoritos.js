@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom"
-import '../Favoritos/styles.css'
+
 
 class Favoritos extends Component{
     constructor(props){
-        super(props);
+        super(props)
         this.state = {
           verMas: "hide",
           dataPelis: [],
@@ -16,7 +16,7 @@ class Favoritos extends Component{
       let storage = localStorage.getItem("favoritos")
       if(storage !== null){
         let parsedStorage = JSON.parse(storage)
-      
+       
        Promise.all(
           parsedStorage.map((fav) => {
             return(

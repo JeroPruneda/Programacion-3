@@ -218,6 +218,8 @@ main{
 
 .portada .imgLaptop{
     display: block;
+    width: 200%;
+    height: 100%;
 }
 
 .portada {

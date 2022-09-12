@@ -14,6 +14,24 @@ class PeliculasCard extends Component {
 
     }
   }
+
+  componentDidMount(){
+    let storage = localStorage.getItem("favoritos")
+    let parsed = JSON.parse(storage)
+    if (parsed !== null) {
+      let favorito = parsed.includes(this.props.id)
+      if (favorito) {
+        this.setState({
+          favoritos: true
+        })
+      }
+      
+    }
+
+  }
+
+
+
   verMas(){
     if(this.state.verMas === 'show'){
       this.setState({
