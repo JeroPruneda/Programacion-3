@@ -39,7 +39,7 @@ class TodasSeries extends Component {
                     descripcion={personaje.overview}
                     id = {personaje.id}
                     />):
-                <h1>Cargando..</h1>
+                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
             }
       </section>
         </>

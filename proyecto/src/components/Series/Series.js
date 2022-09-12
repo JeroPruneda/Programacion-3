@@ -24,22 +24,14 @@ class Series extends Component {
         this.setState({
             data: agregar
         })
-
-    agregarFavoritos(id){
-        let agregar = this.state.data.filter(agrega => agrega.id !== id)
-        this.setState({
-            data: agregar
-        })
-
-    }}
-
+    }
 
   render() {
     return (
         <>
         <div className="palabra">
-    <h3>SERIES POPULARES</h3>
-</div>
+            <h3>SERIES POPULARES</h3>
+        </div>
         <section className="card-container">
             {
                 this.state.data.length > 0 ?
@@ -52,7 +44,7 @@ class Series extends Component {
                     id = {personaje.id}
                     agregar = {(id) => this.agregarFavoritos(id)}
                     />):
-                <h1>Cargando..</h1>
+                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
             }
       </section>
         </>

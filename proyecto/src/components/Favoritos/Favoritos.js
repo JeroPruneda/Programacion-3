@@ -85,10 +85,12 @@ class Favoritos extends Component{
                      </section>
                     
                      )
-                    : 'Cargando..'
+                    : 
+                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
                 }
                     <div className="palabra">
                <h3>Tus Series Favoritas</h3>
+               
                 </div>
             </div>
         )
