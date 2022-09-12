@@ -64,23 +64,23 @@ class Favoritos extends Component{
                 {
                     this.state.dataPelis.length > 0 ?
                     this.state.dataPelis.map((elm, idx) =>
-                    <>
-                    <section className='peliculaspopulares'>
-                    <a className="apolaroid">
-                    <article className="polaroid">
-                    <div className="textopolaroid">
-                     <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.original_title}</p>
-                     <img  src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> 
-                     <p className={this.state.verMas} >{elm.overview}</p>
-                     {/* {
-                    this.state.favoritos ? <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(elm.id)} > Agregar a Favoritos</button> 
-                    } */}
-                     <button onClick={() => this.verMas()}>Ver más</button>
+        <section className="card-container">
+          
+              <a className="apolaroid">
+                <article className="polaroid">
+                      <div className="textopolaroid">
+                        <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.original_title}</p>
+                            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> 
+                                <p className={this.state.verMas} >{elm.overview}</p>
+                     <br></br>
+                                        <button onClick={() => this.verMas()}>Ver más</button>
+                     <br></br>
+                                    <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
                      </div>
                      </article>
                      </a>
                      </section>
-                     </>
+                    
                      )
                     : 'Cargando..'
                 }
