@@ -70,7 +70,7 @@ class FavoritoSerie extends Component{
                 
                       <div className="textopolaroid">
                         <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.name}</p>
-                            <Link to={`/detalle/${this.props.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
+                            <Link to={`/detalleSerie/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
                                 <p className={this.state.verMas} >{elm.overview}</p>
                      <br></br>
                                         <button onClick={() => this.verMas()}>Ver más</button>
