@@ -10,7 +10,7 @@ class SeriesCard extends Component {
     this.state ={
       verMas: 'hide',
       value:"",
-      favoritos: false
+      favoritosSeries: false
     }
   }
   verMas(){
@@ -26,18 +26,18 @@ class SeriesCard extends Component {
   }
 
   agregarFavoritos(id){
-    let fav = localStorage.getItem("favoritos")
+    let fav = localStorage.getItem("favoritosSeries")
     if (fav === null) {
       let arr = [id]
       let string = JSON.stringify(arr)
-      localStorage.setItem("favoritos", string)
+      localStorage.setItem("favoritosSeries", string)
       
       
     } else {
       let parse =  JSON.parse(fav)
       parse.push(id)
       let string = JSON.stringify(parse)
-      localStorage.setItem("favoritos", string)
+      localStorage.setItem("favoritosSeries", string)
     }
 
     this.setState({
@@ -46,14 +46,14 @@ class SeriesCard extends Component {
   }
 
   removeFavoritos(id){
-    let fav = localStorage.getItem("favoritos")
+    let fav = localStorage.getItem("favoritosSeries")
     let parsed = JSON.parse(fav)
     let filtro = parsed.filter(elm => elm !== id)
     let string = JSON.stringify(filtro)
-    localStorage.setItem("favoritos", string)
+    localStorage.setItem("favoritosSeries", string)
 
     this.setState({
-      favoritos: false
+      favoritosSeries: false
     })
   }
   render(){
