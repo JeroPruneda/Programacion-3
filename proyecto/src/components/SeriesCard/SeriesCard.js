@@ -8,22 +8,17 @@ class SeriesCard extends Component {
   constructor(props){
     super(props)
     this.state ={
-      verMas: 'hide',
+      verMas: 'false',
       value:"",
       favoritosSeries: false
     }
   }
-  verMas(){
-    if(this.state.verMas === 'show'){
-      this.setState({
-        verMas:'hide'
-      })
-    } else {
-      this.setState({
-        verMas:'show'
-      })
-    }
-  }
+  show(){
+    this.setState( {verMas: true} )
+}
+hide(){
+    this.setState({verMas: false} )
+}
 
   agregarFavoritos(id){
     let fav = localStorage.getItem("favoritosSeries")
@@ -65,11 +60,21 @@ class SeriesCard extends Component {
             <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt=""></img>
             <div className="textopolaroid">
                 <p className="textopolaroidtitulo"> <Link to={`/detalleSerie/${this.props.id}`}> {this.props.name}</Link> </p>
-                <p className={this.state.verMas}>{this.props.descripcion}</p>
-              <button onClick={() => this.verMas()}>Ver más</button>
+                {/* <p className={this.state.verMas}>{this.props.descripcion}</p> */}
+              {/* <button onClick={() => this.verMas()}>Ver más</button> */}
               {
                 this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
+              {this.state.verMas ? 
+                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                        :   
+                        <section className='extra'>                            
+                            <p>Descripcion: {this.props.descripcion}</p> 
+                            <button  onClick={() => this.show()}>Ver menos</button>
+                        </section>                                          
+                                             
+                        
+                    } 
               
             </div>
         </article>
