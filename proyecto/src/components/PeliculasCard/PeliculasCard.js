@@ -9,22 +9,17 @@ class PeliculasCard extends Component {
   constructor(props){
     super(props)
     this.state ={
-      verMas: 'hide',
+      verMas: 'false',
       favoritos: false
 
     }
   }
-  verMas(){
-    if(this.state.verMas === 'show'){
-      this.setState({
-        verMas:'hide'
-      })
-    } else {
-      this.setState({
-        verMas:'show'
-      })
-    }
-  }
+  show(){
+    this.setState( {verMas: true} )
+}
+hide(){
+    this.setState({verMas: false} )
+}
 
   agregarFavoritos(id){
     let fav = localStorage.getItem("favoritos")
@@ -69,12 +64,21 @@ class PeliculasCard extends Component {
             <div className="textopolaroid">
               <p className="textopolaroidtitulo"> <Link to={`/detalle/${this.props.id}`}> {this.props.name}</Link></p>
              
-              <p className={this.state.verMas}>{this.props.descripcion}</p> 
+              {/* <p className={this.state.verMas}>{this.props.descripcion}</p>  */}
               {
                 this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
-              
-              <button onClick={() => this.verMas()}>Ver más</button>
+              {this.state.verMas ? 
+                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                        :   
+                        <section className='extra'>                            
+                            <p>Descripcion: {this.props.descripcion}</p> 
+                            <button  onClick={() => this.show()}>Ver menos</button>
+                        </section>                                          
+                                             
+                        
+                    } 
+             {/*  <button onClick={() => this.verMas()}>Ver más</button> */}
 
 
               
