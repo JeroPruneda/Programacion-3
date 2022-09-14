@@ -68,7 +68,7 @@ class FavoritosPeliculas extends Component{
              
               {/* <p className={this.state.verMas}>{this.props.descripcion}</p>  */}
               {
-                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
+                <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
               }
               {this.state.verMas ? 
                         <button  onClick={() => this.hide()}>Ver mas</button>   
