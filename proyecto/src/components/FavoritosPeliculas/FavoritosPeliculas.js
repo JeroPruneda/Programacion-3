@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom"
-
+import './PeliFav.css'
 
 class FavoritosPeliculas extends Component{
     constructor(props){
         super(props)
         this.state = {
-          verMas: "hide",
+          verMas: "false",
           dataPelis: [],
           listo: false
         }
@@ -33,17 +33,12 @@ class FavoritosPeliculas extends Component{
       }
     }
     
-    verMas(){
-        if(this.state.verMas === 'show'){
-          this.setState({
-            verMas:'hide'
-          })
-        } else {
-          this.setState({
-            verMas:'show'
-          })
-        }
-      }
+    show(){
+      this.setState( {verMas: true} )
+  }
+  hide(){
+      this.setState({verMas: false} )
+  }
 
       removeFavoritos(id){
         let fav = localStorage.getItem("favoritos")
@@ -64,22 +59,37 @@ class FavoritosPeliculas extends Component{
                 {
                     this.state.dataPelis.length > 0 ?
                     this.state.dataPelis.map((elm, idx) =>
-        <section className="card-container">
-              <a className="apolaroid">
-                <article className="polaroid">
-                
-                      <div className="textopolaroid">
-                      <Link to={`/detalle/${this.props.id}`}> <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.title}</p></Link>
-                        <Link to={`/detalle/${this.props.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
-                                <p className={this.state.verMas} >{elm.overview}</p>
-                     <br></br>
-                                        <button onClick={() => this.verMas()}>Ver más</button>
-                     <br></br>
-                            <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
-                     </div>
-                     </article>
-                     </a>
-                     </section>
+                    <section className='peliculaspopulares'>
+    <a className="apolaroid">
+        <article className="polaroid">
+            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="" /> 
+            <div className="textopolaroid">
+              <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.title} <Link to={`/detalle/${this.props.id}`}> </Link></p>
+             
+              {/* <p className={this.state.verMas}>{this.props.descripcion}</p>  */}
+              {
+                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
+              }
+              {this.state.verMas ? 
+                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                        :   
+                        <section className='extra'>                            
+                            <p>Descripcion: {elm.overview}</p> 
+                            <button  onClick={() => this.show()}>Ver menos</button>
+                        </section>                                          
+                                             
+                        
+                    } 
+             {/*  <button onClick={() => this.verMas()}>Ver más</button> */}
+
+
+              
+            </div>
+        </article>
+   </a>
+   
+</section>
+        
                     
                      )
                     : 
