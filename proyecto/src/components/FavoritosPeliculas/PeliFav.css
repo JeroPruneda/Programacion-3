@@ -8,6 +8,12 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
+/* .hide {
+    display: none;
+}
+.show {
+    display: block;
+} */
 
 .palabra {
     color:#D5B6A3;

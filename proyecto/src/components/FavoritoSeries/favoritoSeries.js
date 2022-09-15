@@ -64,22 +64,36 @@ class FavoritoSerie extends Component{
                 {
                     this.state.dataSeries.length > 0 ?
                     this.state.dataSeries.map((elm, idx) =>
-        <section className="card-container">
-              <a className="apolaroid">
-                <article className="polaroid">
+                    <section className='peliculaspopulares'>
+                    <a className="apolaroid">
+                        <article className="polaroid">
+                            <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="" /> 
+                            <div className="textopolaroid">
+                              <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.title} <Link to={`/detalle/${this.props.id}`}> </Link></p>
+                             
+                              {/* <p className={this.state.verMas}>{this.props.descripcion}</p>  */}
+                              {
+                                <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
+                              }
+                              {this.state.verMas ? 
+                                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                                        :   
+                                        <section className='extra'>                            
+                                            <p>Descripcion: {elm.overview}</p> 
+                                            <button  onClick={() => this.show()}>Ver menos</button>
+                                        </section>                                          
+                                                             
+                                        
+                                    } 
+                             {/*  <button onClick={() => this.verMas()}>Ver más</button> */}
                 
-                      <div className="textopolaroid">
-                        <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.name}</p>
-                            <Link to={`/detalleSerie/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
-                                <p className={this.state.verMas} >{elm.overview}</p>
-                     <br></br>
-                                        <button onClick={() => this.verMas()}>Ver más</button>
-                     <br></br>
-                            <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
-                     </div>
-                     </article>
-                     </a>
-                     </section>
+                
+                              
+                            </div>
+                        </article>
+                   </a>
+                   
+                </section>
                     
                      )
                     : 

@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom"
-
+import './PeliFav.css'
 
 class FavoritosPeliculas extends Component{
     constructor(props){
         super(props)
         this.state = {
-          verMas: "hide",
+          verMas: "false",
           dataPelis: [],
           listo: false
         }
@@ -35,17 +35,12 @@ class FavoritosPeliculas extends Component{
       }
     }
     
-    verMas(){
-        if(this.state.verMas === 'show'){
-          this.setState({
-            verMas:'hide'
-          })
-        } else {
-          this.setState({
-            verMas:'show'
-          })
-        }
-      }
+    show(){
+      this.setState( {verMas: true} )
+  }
+  hide(){
+      this.setState({verMas: false} )
+  }
 
       removeFavoritos(id){
         let fav = localStorage.getItem("favoritos")
