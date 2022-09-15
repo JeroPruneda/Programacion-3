@@ -51,8 +51,11 @@ class FavoritoSerie extends Component{
         let filtro = parsed.filter(elm => elm !== id)
         let string = JSON.stringify(filtro)
         localStorage.setItem("favoritos", string)
+
+        let arrSacarDeFavorito = this.state.dataSeries.filter(elm => elm.id !== id)
     
         this.setState({
+          dataSeries: arrSacarDeFavorito,
           favoritos: false
         })
       }
@@ -68,13 +71,13 @@ class FavoritoSerie extends Component{
                     
                     <a className="apolaroid">
                         <article className="polaroid">
-                            <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="" /> </Link>
+                            <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="hola" /> </Link>
                             <div className="textopolaroid">
-                              <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo" >{elm.title}</p>  </Link>
+                              <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo" > {elm.title}</p>  </Link>
                              
-                              {/* <p className={this.state.verMas}>{this.props.descripcion}</p>  */}
+                          
                               {
-                                <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos </button> 
+                                <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos </button> 
                               }
                               {this.state.verMas ? 
                                         <button  onClick={() => this.hide()}>Ver mas</button>   
@@ -86,10 +89,7 @@ class FavoritoSerie extends Component{
                                                              
                                         
                                     } 
-                             {/*  <button onClick={() => this.verMas()}>Ver más</button> */}
-                
-                
-                              
+                      
                             </div>
                         </article>
                    </a>
