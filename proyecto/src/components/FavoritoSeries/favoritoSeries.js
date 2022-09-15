@@ -46,11 +46,11 @@ class FavoritoSerie extends Component{
       }
 
       removeFavoritos(id){
-        let fav = localStorage.getItem("favoritos")
+        let fav = localStorage.getItem("favoritosSeries")
         let parsed = JSON.parse(fav)
         let filtro = parsed.filter(elm => elm !== id)
         let string = JSON.stringify(filtro)
-        localStorage.setItem("favoritos", string)
+        localStorage.setItem("favoritosSeries", string)
 
         let arrSacarDeFavorito = this.state.dataSeries.filter(elm => elm.id !== id)
     
