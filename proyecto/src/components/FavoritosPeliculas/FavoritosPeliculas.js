@@ -55,11 +55,11 @@ class FavoritosPeliculas extends Component{
       render(){
         return(
             <div>
-             
+              <section className='peliculaspopulares'>
                 {
                     this.state.dataPelis.length > 0 ?
                     this.state.dataPelis.map((elm, idx) =>
-                    <section className='peliculaspopulares'>
+                   
     <a className="apolaroid">
         <article className="polaroid">
             <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="" /> 
@@ -88,14 +88,14 @@ class FavoritosPeliculas extends Component{
         </article>
    </a>
    
-</section>
+
         
                     
                      )
                     : 
                     <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
                 }
-                  
+                 </section> 
             </div>
         )
   

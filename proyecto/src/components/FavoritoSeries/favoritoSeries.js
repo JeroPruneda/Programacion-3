@@ -60,11 +60,12 @@ class FavoritoSerie extends Component{
       render(){
         return(
             <div>
-            
+            <section className="peliculaspopulares">
                 {
+                  
                     this.state.dataSeries.length > 0 ?
                     this.state.dataSeries.map((elm, idx) =>
-                    <section className='peliculaspopulares'>
+                    
                     <a className="apolaroid">
                         <article className="polaroid">
                             <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="" /> 
@@ -93,7 +94,7 @@ class FavoritoSerie extends Component{
                         </article>
                    </a>
                    
-                </section>
+               
                     
                      )
                     : 
@@ -101,7 +102,7 @@ class FavoritoSerie extends Component{
                 }
                     
                
-                
+                    </section>  
             </div>
         )
   

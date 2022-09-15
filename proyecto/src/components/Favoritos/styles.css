@@ -23,6 +23,8 @@ body {
 }
 
 .peliculaspopulares {
+    background-color: aqua;
+   
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 2%;
@@ -38,7 +40,7 @@ body {
 }
 
 .polaroid {
-    background-color: #D5B6A3;
+    background-color: #4315e7;
     
     background-size: cover;
     display: grid;
@@ -187,7 +189,8 @@ form button{
         margin-left:50px;
     }
     .card-container{
-        display: grid;
+        
+             display: grid;
             grid-template-columns: repeat(6,16%);
             gap: 1%;
             margin-right:1%;
