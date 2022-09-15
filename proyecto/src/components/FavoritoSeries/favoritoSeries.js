@@ -33,17 +33,12 @@ class FavoritoSerie extends Component{
       }
     }
     
-    verMas(){
-        if(this.state.verMas === 'show'){
-          this.setState({
-            verMas:'hide'
-          })
-        } else {
-          this.setState({
-            verMas:'show'
-          })
-        }
-      }
+    show(){
+      this.setState( {verMas: true} )
+  }
+  hide(){
+      this.setState({verMas: false} )
+  }
 
       removeFavoritos(id){
         let fav = localStorage.getItem("favoritosSeries")

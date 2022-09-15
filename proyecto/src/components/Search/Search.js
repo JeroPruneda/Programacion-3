@@ -21,10 +21,12 @@ class Search extends Component{
     render(){
         return(
         <>
-            <form onSubmit={(event) => this.eSubmit(event)}>
+        <div className="buscador">
+            <form className="interno" onSubmit={(event) => this.eSubmit(event)}>
                 <input className="container" type="text" onChange= {(event) => this.controlarCambios(event)} value={this.state.valor}></input>
-                <button type="submit"> Buscar</button>
+                <button className="bot" type="submit"> Buscar</button>
             </form>
+            </div>
         </> 
         )
     }
