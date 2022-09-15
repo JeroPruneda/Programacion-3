@@ -54,7 +54,10 @@ class FavoritosPeliculas extends Component{
         let string = JSON.stringify(filtro)
         localStorage.setItem("favoritos", string)
     
+        let arrSacarDeFavorito = this.state.dataPelis.filter(elm => elm.id !== id)
+
         this.setState({
+          dataPelis: arrSacarDeFavorito,
           favoritos: false
         })
       }
@@ -71,13 +74,13 @@ class FavoritosPeliculas extends Component{
                 <article className="polaroid">
                 
                       <div className="textopolaroid">
-                      <Link to={`/detalle/${this.props.id}`}> <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.title}</p></Link>
-                        <Link to={`/detalle/${this.props.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
+                      <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo" key={idx + elm.name}>{elm.title}</p></Link>
+                        <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="funciona" /> </Link>
                                 <p className={this.state.verMas} >{elm.overview}</p>
                      <br></br>
                                         <button onClick={() => this.verMas()}>Ver más</button>
                      <br></br>
-                            <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
+                            <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos</button> 
                      </div>
                      </article>
                      </a>
