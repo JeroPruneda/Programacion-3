@@ -6,8 +6,7 @@ import './styles.css'
 
 class Favoritos extends Component{
     
-
-      render(){
+     render(){
         return(
             <>
             <div className="palabra">
@@ -27,6 +26,7 @@ class Favoritos extends Component{
             /* <div>
               <div className="palabra">
                <h3>Tus Peliculas Favoritas</h3>
+               
                <FavoritosPeliculas />
                 </div>
                 

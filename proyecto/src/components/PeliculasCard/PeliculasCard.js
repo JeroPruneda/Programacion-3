@@ -16,10 +16,10 @@ class PeliculasCard extends Component {
   }
   show(){
     this.setState( {verMas: true} )
-}
-hide(){
+  }
+  hide(){
     this.setState({verMas: false} )
-}
+  }
 
   agregarFavoritos(id){
     let fav = localStorage.getItem("favoritos")
@@ -64,7 +64,6 @@ hide(){
             <div className="textopolaroid">
               <p className="textopolaroidtitulo"> <Link to={`/detalle/${this.props.id}`}> {this.props.name}</Link></p>
              
-              {/* <p className={this.state.verMas}>{this.props.descripcion}</p>  */}
               {
                 this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
@@ -77,11 +76,7 @@ hide(){
                         </section>                                          
                                              
                         
-                    } 
-             {/*  <button onClick={() => this.verMas()}>Ver más</button> */}
-
-
-              
+                    }   
             </div>
         </article>
    </a>
