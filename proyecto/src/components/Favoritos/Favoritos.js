@@ -5,12 +5,12 @@ import FavoritosPeliculas from '../FavoritosPeliculas/FavoritosPeliculas';
 
 class Favoritos extends Component{
     
-
-      render(){
+     render(){
         return(
             <div>
               <div className="palabra">
                <h3>Tus Peliculas Favoritas</h3>
+               
                <FavoritosPeliculas />
                 </div>
                 

@@ -11,6 +11,8 @@ class FavoritosPeliculas extends Component{
           listo: false
         }
     }
+
+    
     componentDidMount(){
       let storage = localStorage.getItem("favoritos")
       if(storage !== null){
