@@ -74,7 +74,7 @@ class FavoritoSerie extends Component{
                              
                               {/* <p className={this.state.verMas}>{this.props.descripcion}</p>  */}
                               {
-                                <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button> 
+                                <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos </button> 
                               }
                               {this.state.verMas ? 
                                         <button  onClick={() => this.hide()}>Ver mas</button>   
