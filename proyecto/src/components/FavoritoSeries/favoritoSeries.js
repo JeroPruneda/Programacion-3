@@ -66,16 +66,16 @@ class FavoritoSerie extends Component{
                     
                     <a className="apolaroid">
                         <article className="polaroid">
-                            <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="hola" /> </Link>
+                            <Link to={`/detalleSerie/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="hola" /> </Link>
                             <div className="textopolaroid">
-                              <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo" key={idx + elm.title} > {elm.title}</p>  </Link>
+                              <Link to={`/detalleSerie/${elm.id}`}> <p className="textopolaroidtitulo"> {elm.name}</p>  </Link>
                              
                           
                               {
-                                <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos </button> 
+                                <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos  </button> 
                               }
                               {this.state.verMas ? 
-                                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                                        <button  onClick={() => this.hide()}>Ver mas </button>   
                                         :   
                                         <section className='extra'>                            
                                             <p>Descripcion: {elm.overview}</p> 

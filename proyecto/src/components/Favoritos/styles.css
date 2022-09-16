@@ -23,11 +23,8 @@ body {
 }
 
 .peliculaspopulares {
-<<<<<<< HEAD
-=======
   
     width: 300px;
->>>>>>> ef4a2ba22cb0e4d9fb1621ab2f3588e203459db0
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 2%;
