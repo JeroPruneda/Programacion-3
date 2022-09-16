@@ -75,7 +75,9 @@ hide(){
                 {/* <p className={this.state.verMas}>{this.props.descripcion}</p> */}
               {/* <button onClick={() => this.verMas()}>Ver más</button> */}
               {
-                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>: <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
+                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>
+                : 
+                <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
               {this.state.verMas ? 
                         <button  onClick={() => this.hide()}>Ver mas</button>   
