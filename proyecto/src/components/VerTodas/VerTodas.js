@@ -45,11 +45,14 @@ class VerTodas extends Component {
     render() {
     return (
     <>
-        <div className="palabra">
-            <h3>Todas las peliculas</h3>
+        
             <SearchTodas filtrar = {(nombre) => this.filtrarPeli(nombre)}/>
-            <button onClick={() => this.traerMas()}> Trae mas peliculas</button>
-        </div>
+            <div className="palabra">
+            <h3>Todas las peliculas</h3>
+            </div>
+            
+            <button onClick={() => this.traerMas()} className="botton"> Traer mas peliculas</button>
+      
         <section className="card-container">
             
         

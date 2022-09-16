@@ -20,6 +20,18 @@ class PeliculasCard extends Component {
   hide(){
     this.setState({verMas: false} )
   }
+  componentDidMount(){
+        let fav= localStorage.getItem("favoritos")
+        let string = JSON.parse(fav)
+        // let esFavorito = string.includes(this.props.id) no me lee el "includes"
+        // if((esFavorito) === true){
+        //   this.setState({
+        //     favoritos : true
+        //   })
+        // }
+
+          
+  }
 
   agregarFavoritos(id){
     let fav = localStorage.getItem("favoritos")

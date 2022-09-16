@@ -44,10 +44,11 @@ class TodasSeries extends Component {
   render() {
     return (
         <>
-        <div className="palabra">
-            <h3>TODAS LAS SERIES</h3>
+        
             <SearchTodas filtrar = {(nombre) => this.filtrarPeli(nombre)}/>
-            <button onClick={() => this.traerMas()}> Trae mas peliculas</button>
+            <div className="palabra">
+            <h3>TODAS LAS SERIES</h3>
+            <button onClick={() => this.traerMas()} className="botton"> Traer mas series</button>
         </div>
         <section className="card-container">
             {
