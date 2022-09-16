@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {Link} from "react-router-dom"
 import PeliculasCard from '../PeliculasCard/PeliculasCard';
+import SearchTodas from '../SearchTodas/SearchTodas';
 
 
 class VerTodas extends Component {
@@ -32,12 +33,21 @@ class VerTodas extends Component {
         }))
         .catch(e => console.log(e))
     }
+
+    filtrarPeli(nombre){
+        let aFiltrado = this.state.data.filter(peli => peli.title.toLowerCase().includes(nombre.toLowerCase()))
+
+        this.setState({
+            data: aFiltrado
+        })
+    }
     
     render() {
     return (
     <>
         <div className="palabra">
             <h3>Todas las peliculas</h3>
+            <SearchTodas filtrar = {(nombre) => this.filtrarPeli(nombre)}/>
             <button onClick={() => this.traerMas()}> Trae mas peliculas</button>
         </div>
         <section className="card-container">
