@@ -1,35 +1,36 @@
 import React, {Component} from "react";
 
-class Search extends Component{
-    constructor(props){
-        super(props);
+class SearchTodas extends Component{
+    constructor(){
+        super()
         this.state = {
-            valor: ""
-
+            valor: ''
         }
     }
-    eSubmit(event){
+
+    evitarSubmit(event){
         event.preventDefault()
     }
 
-    controlarCambios(event){
+    guardarCambios(event){
         this.setState({
+
             valor: event.target.value
-        }, () => this.props.buscar(this.state.valor)
+        }, () => this.props.filtrar(this.state.valor)
         )
+    
     }
     render(){
         return(
-        <>
-        <div className="buscador">
+            <div className="buscador">
             <form className="interno" onSubmit={(event) => this.eSubmit(event)}>
                 <input className="container" type="text" onChange= {(event) => this.controlarCambios(event)} value={this.state.valor}></input>
                 <button className="bot" type="submit"> Buscar</button>
             </form>
             </div>
-        </> 
         )
     }
 
 }
-export default Search
+
+export default SearchTodas

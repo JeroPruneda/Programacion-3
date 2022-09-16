@@ -62,6 +62,7 @@ class Peliculas extends Component {
                     agregar = {(id) => this.agregarFavoritos(id)}
 
                     />):
+                    
                     <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
             }
         </section>

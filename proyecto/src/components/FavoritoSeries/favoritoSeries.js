@@ -33,17 +33,12 @@ class FavoritoSerie extends Component{
       }
     }
     
-    verMas(){
-        if(this.state.verMas === 'show'){
-          this.setState({
-            verMas:'hide'
-          })
-        } else {
-          this.setState({
-            verMas:'show'
-          })
-        }
-      }
+    show(){
+      this.setState( {verMas: true} )
+  }
+  hide(){
+      this.setState({verMas: false} )
+  }
 
       removeFavoritos(id){
         let fav = localStorage.getItem("favoritosSeries")
@@ -67,13 +62,13 @@ class FavoritoSerie extends Component{
                 {
                   
                     this.state.dataSeries.length > 0 ?
-                    this.state.dataSeries.map((elm) =>
+                    this.state.dataSeries.map((elm, idx) =>
                     
                     <a className="apolaroid">
                         <article className="polaroid">
                             <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="hola" /> </Link>
                             <div className="textopolaroid">
-                              <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo" > {elm.title}</p>  </Link>
+                              <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo" key={idx + elm.title} > {elm.title}</p>  </Link>
                              
                           
                               {
