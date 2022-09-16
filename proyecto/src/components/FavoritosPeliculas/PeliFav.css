@@ -185,6 +185,7 @@ form button{
         grid-template-columns: repeat(6,16%);
         margin-right:50px;
         margin-left:50px;
+        
     }
     .card-container{
         display: grid;
@@ -217,4 +218,5 @@ form button{
         width: 400px;
     }
 }
+
 

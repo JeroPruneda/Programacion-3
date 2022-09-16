@@ -61,6 +61,7 @@ class ResultadosBusqueda extends Component {
 
   render(){
     return (
+     
     <section className='peliculaspopulares'>
     <a className="apolaroid">
         <article className="polaroid">
@@ -82,6 +83,7 @@ class ResultadosBusqueda extends Component {
    </a>
    
 </section>
+
     )
     
   }
