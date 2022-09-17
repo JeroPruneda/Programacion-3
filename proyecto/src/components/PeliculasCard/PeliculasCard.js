@@ -70,6 +70,7 @@ class PeliculasCard extends Component {
 
   render(){
     return (
+      
     <section className='peliculaspopulares'>
     <a className="apolaroid">
         <article className="polaroid">

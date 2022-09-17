@@ -24,9 +24,9 @@ body {
 
 .peliculaspopulares {
   
-    width: 300px;
+    
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     margin: 2%;
     gap: 10px;
     box-shadow: 0rem 0rem 10px 8px rgb(255 255 255 / 25%);
