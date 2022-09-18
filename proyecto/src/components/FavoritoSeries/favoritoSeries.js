@@ -51,7 +51,6 @@ class FavoritoSerie extends Component{
     
         this.setState({
           dataSeries: arrSacarDeFavorito,
-          favoritos: false
         })
       }
 
@@ -62,11 +61,11 @@ class FavoritoSerie extends Component{
                 {
                   
                     this.state.dataSeries.length > 0 ?
-                    this.state.dataSeries.map((elm, idx) =>
+                    this.state.dataSeries.map((elm, idx) => 
                     
                     <a className="apolaroid">
-                        <article className="polaroid">
-                            <Link to={`/detalleSerie/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="hola" /> </Link>
+                        <article key= {elm + idx} className="polaroid">
+                            <Link to={`/detalleSerie/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="No tienes series favoritas" /> </Link>
                             <div className="textopolaroid">
                               <Link to={`/detalleSerie/${elm.id}`}> <p className="textopolaroidtitulo"> {elm.name}</p>  </Link>
                              
@@ -88,9 +87,7 @@ class FavoritoSerie extends Component{
                             </div>
                         </article>
                    </a>
-                   
-               
-                    
+            
                      )
                     : 
                     <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>

@@ -53,7 +53,6 @@ class FavoritosPeliculas extends Component{
 
         this.setState({
           dataPelis: arrSacarDeFavorito,
-          favoritos: false
         })
       }
 
@@ -67,8 +66,8 @@ class FavoritosPeliculas extends Component{
                     this.state.dataPelis.map((elm, idx ) =>
                     
                     <a className="apolaroid">
-                        <article className="polaroid">
-                             <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="" /> </Link>
+                        <article key= {elm + idx} className="polaroid">
+                             <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="No tienes peliculas favorit" /> </Link>
                             <div className="textopolaroid">
                                <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo">{elm.title} </p></Link>
                              
