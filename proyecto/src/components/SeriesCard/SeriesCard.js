@@ -93,7 +93,7 @@ hide(){
             </div>
         </article>
     </a>
-</section>
+</section> 
 
   
     )
