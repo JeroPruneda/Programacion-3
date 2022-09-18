@@ -63,10 +63,10 @@ class FavoritosPeliculas extends Component{
                 {
                   
                     this.state.dataPelis.length > 0 ?
-                    this.state.dataPelis.map((elm ) =>
+                    this.state.dataPelis.map((elm, idx ) =>
                     
                     <a className="apolaroid">
-                        <article className="polaroid">
+                        <article key= {elm + idx} className="polaroid">
                              <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="No tienes peliculas favorit" /> </Link>
                             <div className="textopolaroid">
                                <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo">{elm.title} </p></Link>
