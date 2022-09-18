@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom"
 import FavoritosSeries from '../FavoritoSeries/favoritoSeries';
 import FavoritosPeliculas from '../FavoritosPeliculas/FavoritosPeliculas';
-import './styles.css'
+
 
 class Favoritos extends Component{
     
