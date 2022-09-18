@@ -64,7 +64,7 @@ class FavoritosPeliculas extends Component{
                 {
                   
                     this.state.dataPelis.length > 0 ?
-                    this.state.dataPelis.map((elm ) =>
+                    this.state.dataPelis.map((elm, idx ) =>
                     
                     <a className="apolaroid">
                         <article className="polaroid">

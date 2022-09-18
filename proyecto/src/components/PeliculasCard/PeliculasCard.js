@@ -57,7 +57,7 @@ class PeliculasCard extends Component {
   removeFavoritos(id){
     let fav = localStorage.getItem("favoritos")
     let parsed = JSON.parse(fav)
-    let filtro = parsed.filter(elm => elm !== id)
+    let filtro = parsed.filter(elm => elm !== id) 
     let string = JSON.stringify(filtro)
     localStorage.setItem("favoritos", string)
 
@@ -78,7 +78,8 @@ class PeliculasCard extends Component {
               <p className="textopolaroidtitulo"> <Link to={`/detalle/${this.props.id}`}> {this.props.name}</Link></p>
              
               {
-                this.state.favoritos ? <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>
+                this.state.favoritos ? 
+                <button onClick={() => this.removeFavoritos(this.props.id)}> Sacar de Favoritos</button>
                 : 
                 <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
