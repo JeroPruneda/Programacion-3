@@ -22,7 +22,7 @@ class TodasSeries extends Component {
     }
 
     traerMas(){
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${this.state.otraPag}`)
+        fetch(`https://api.themoviedb.org/3/tv/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c&language=en-US&page=${this.state.otraPag}`)
         .then(resp => resp.json())
         .then(data => this.setState({
             data: data.results,
@@ -61,7 +61,9 @@ class TodasSeries extends Component {
                     descripcion={personaje.overview}
                     id = {personaje.id}
                     />):
-                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
+                    <div>
+                    <img className="imagen" src="https://media4.giphy.com/media/11ASZtb7vdJagM/giphy.gif?cid=ecf05e477jslw010j1zwx5dcdi9ri9lcpp6nzn0aumipgw7n&rid=giphy.gif&ct=g"/>
+                    </div>
             }
       </section>
         </>

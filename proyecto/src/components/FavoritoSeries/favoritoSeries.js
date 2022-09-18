@@ -51,7 +51,6 @@ class FavoritoSerie extends Component{
     
         this.setState({
           dataSeries: arrSacarDeFavorito,
-          favoritos: false
         })
       }
 
@@ -62,20 +61,20 @@ class FavoritoSerie extends Component{
                 {
                   
                     this.state.dataSeries.length > 0 ?
-                    this.state.dataSeries.map((elm, idx) =>
+                    this.state.dataSeries.map((elm, idx) => 
                     
                     <a className="apolaroid">
-                        <article className="polaroid">
-                            <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="hola" /> </Link>
+                        <article key= {elm + idx} className="polaroid">
+                            <Link to={`/detalleSerie/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="No tienes series favoritas" /> </Link>
                             <div className="textopolaroid">
-                              <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo" key={idx + elm.title} > {elm.title}</p>  </Link>
+                              <Link to={`/detalleSerie/${elm.id}`}> <p className="textopolaroidtitulo"> {elm.name}</p>  </Link>
                              
                           
                               {
-                                <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos </button> 
+                                <button onClick={() => this.removeFavoritos(elm.id)}> Sacar de Favoritos  </button> 
                               }
                               {this.state.verMas ? 
-                                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                                        <button  onClick={() => this.hide()}>Ver mas </button>   
                                         :   
                                         <section className='extra'>                            
                                             <p>Descripcion: {elm.overview}</p> 
@@ -88,12 +87,13 @@ class FavoritoSerie extends Component{
                             </div>
                         </article>
                    </a>
-                   
-               
-                    
+            
                      )
                     : 
-                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
+                    <div>
+                    <h3>AGREGA TUS FAVORITOS!!</h3>
+                    <img className="imagen" src="https://c.tenor.com/FdZ835rrohUAAAAd/cinreservas-cine.gif"/>
+                    </div>
                 }
                     
                

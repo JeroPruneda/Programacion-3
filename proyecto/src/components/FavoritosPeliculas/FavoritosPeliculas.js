@@ -53,7 +53,6 @@ class FavoritosPeliculas extends Component{
 
         this.setState({
           dataPelis: arrSacarDeFavorito,
-          favoritos: false
         })
       }
 
@@ -64,11 +63,11 @@ class FavoritosPeliculas extends Component{
                 {
                   
                     this.state.dataPelis.length > 0 ?
-                    this.state.dataPelis.map((elm ) =>
+                    this.state.dataPelis.map((elm, idx ) =>
                     
                     <a className="apolaroid">
-                        <article className="polaroid">
-                             <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="" /> </Link>
+                        <article key= {elm + idx} className="polaroid">
+                             <Link to={`/detalle/${elm.id}`}> <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${elm.backdrop_path}`} alt="No tienes peliculas favorit" /> </Link>
                             <div className="textopolaroid">
                                <Link to={`/detalle/${elm.id}`}> <p className="textopolaroidtitulo">{elm.title} </p></Link>
                              
@@ -98,7 +97,10 @@ class FavoritosPeliculas extends Component{
                     
                      )
                     : 
-                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
+                    <div>
+                    <h3>AGREGA TUS FAVORITOS!!</h3>
+                    <img className="imagen" src="https://c.tenor.com/FdZ835rrohUAAAAd/cinreservas-cine.gif"/>
+                    </div>
                 }
                     
                
