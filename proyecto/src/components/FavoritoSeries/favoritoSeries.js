@@ -90,7 +90,10 @@ class FavoritoSerie extends Component{
             
                      )
                     : 
-                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
+                    <div>
+                    <h3>AGREGA TUS FAVORITOS!!</h3>
+                    <img className="imagen" src="https://c.tenor.com/FdZ835rrohUAAAAd/cinreservas-cine.gif"/>
+                    </div>
                 }
                     
                

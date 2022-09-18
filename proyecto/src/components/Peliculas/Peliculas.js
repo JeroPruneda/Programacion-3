@@ -51,7 +51,7 @@ class Peliculas extends Component {
         </div>
         <section className="card-container">
             {
-                this.state.data.length > 0 ?
+                this.state.data.length > 0?
                     this.state.data.map((jose, idx) => 
                     <PeliculasCard 
                     key={jose + idx} 
@@ -63,7 +63,9 @@ class Peliculas extends Component {
 
                     />):
                     
-                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
+                    <div>
+                    <img className="imagen" src="https://media4.giphy.com/media/11ASZtb7vdJagM/giphy.gif?cid=ecf05e477jslw010j1zwx5dcdi9ri9lcpp6nzn0aumipgw7n&rid=giphy.gif&ct=g"/>
+                    </div>
             }
         </section>
      </>

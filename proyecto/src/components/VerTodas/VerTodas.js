@@ -68,7 +68,9 @@ class VerTodas extends Component {
                     agregar = {(id) => this.agregarFavoritos(id)}
                     
                     />):
-                    <img src="https://giphy.com/embed/3y0oCOkdKKRi0"/>
+                    <div>
+                    <img className="imagen" src="https://media4.giphy.com/media/11ASZtb7vdJagM/giphy.gif?cid=ecf05e477jslw010j1zwx5dcdi9ri9lcpp6nzn0aumipgw7n&rid=giphy.gif&ct=g"/>
+                    </div>
             }
            
         </section>
