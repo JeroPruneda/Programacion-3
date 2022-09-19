@@ -34,9 +34,14 @@ class Detalle extends Component{
                 <h1>{this.state.detalle.title}</h1>                    
                 <ul className="detalles">
                     <li className="fechaDeEstreno">{this.state.detalle.release_date}</li>
-                    {/* <li className="fechaDeEstreno"> {this.state.detalle.genres}</li> */}
+                    <li class="duracion">{this.state.detalle.runtime} minutes</li>
+                      
                 </ul>
-                <p className="rating">{this.state.detalle.vote_average}</p>
+                <ul class="genero">{
+/*                                     this.state.detalle.genres.map((Genero) => <li className='genero'>{Genero.name}</li>)
+ */                                }</ul> 
+                <p className="rating">Rating: {this.state.detalle.vote_average}/10</p>
+                <p class="sinopsis"></p>
                 <p className="sinopsis">{this.state.detalle.overview}</p>
                 
             </div>
