@@ -6,6 +6,8 @@ class Detalle extends Component{
         super(props);
         this.state = {
             detalle: {},
+            favoritos: false
+
 
             
         }
@@ -20,6 +22,39 @@ class Detalle extends Component{
         .catch(error => console.log(error))
     
     }
+
+    agregarFavoritos(id){
+        let fav = localStorage.getItem("favoritos")
+        if (fav === null) {
+          let arr = [id]
+          let string = JSON.stringify(arr)
+          localStorage.setItem("favoritos", string)
+          
+          
+        } else {
+          let parse =  JSON.parse(fav)
+          parse.push(id)
+          let string = JSON.stringify(parse)
+          localStorage.setItem("favoritos", string)
+        }
+    
+        this.setState({
+          favoritos: true
+        })
+      }
+
+      removeFavoritos(id){
+        let fav = localStorage.getItem("favoritos")
+        let parsed = JSON.parse(fav)
+        let filtro = parsed.filter(elm => elm !== id) 
+        let string = JSON.stringify(filtro)
+        localStorage.setItem("favoritos", string)
+    
+        this.setState({
+          favoritos: false
+        })
+      }
+
 
 
     render(){
@@ -38,6 +73,12 @@ class Detalle extends Component{
                 </ul>
                 <p className="rating">{this.state.detalle.vote_average}</p>
                 <p className="sinopsis">{this.state.detalle.overview}</p>
+                {
+                this.state.favoritos ? 
+                <button onClick={() => this.removeFavoritos(this.state.detalle.id)}> Sacar de Favoritos</button>
+                : 
+                <button onClick={() => this.agregarFavoritos(this.state.detalle.id)} > Agregar a Favoritos</button> 
+              }
                 
             </div>
         </main>
