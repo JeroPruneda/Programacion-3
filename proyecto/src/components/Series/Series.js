@@ -32,7 +32,7 @@ class Series extends Component {
         <div className="palabra">
             <h3>SERIES POPULARES</h3>
         </div>
-        <section className="card-container">
+        <section className="card">
             {
                 this.state.data.length > 0 ?
                     this.state.data.map((personaje, idx) => 
