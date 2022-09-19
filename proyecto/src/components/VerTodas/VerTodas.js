@@ -53,7 +53,7 @@ class VerTodas extends Component {
             
             <button onClick={() => this.traerMas()} className="botton"> Traer mas peliculas</button>
       
-        <section className="card-container">
+        <section className="card">
             
         
             {

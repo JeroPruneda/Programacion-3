@@ -107,7 +107,7 @@ a,a:hover {
         
     }
     
-.card-container{
+.card{
     display: flex;
         grid-template-columns: repeat(2,46%);
         gap: 1%;
@@ -115,6 +115,8 @@ a,a:hover {
         margin-left: 50px;
         margin-bottom: 2%;
         text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
 }
 /* Desktop */
 /* Desktop */
@@ -191,6 +193,7 @@ form button{
     }
     .card-container{
         display: grid;
+        width: 100%;
             grid-template-columns: repeat(6,16%);
             gap: 1%;
             margin-right:1%;
