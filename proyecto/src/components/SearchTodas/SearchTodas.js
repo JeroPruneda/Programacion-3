@@ -23,8 +23,8 @@ class SearchTodas extends Component{
     render(){
         return(
             <div className="buscador">
-            <form className="interno" onSubmit={(event) => this.eSubmit(event)}>
-                <input className="container" type="text" onChange= {(event) => this.controlarCambios(event)} value={this.state.valor}></input>
+            <form className="interno" onSubmit={(event) => this.evitarSubmit(event)}>
+                <input className="container" type="text" onChange= {(event) => this.guardarCambios(event)} value={this.state.valor}></input>
                 <button className="bot" type="submit"> Buscar</button>
             </form>
             </div>

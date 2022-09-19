@@ -48,6 +48,7 @@ class Peliculas extends Component {
     <>
         <div className="palabra">
             <h3>PELÍCULAS POPULARES</h3>
+           
         </div>
         <section className="card-container">
             {

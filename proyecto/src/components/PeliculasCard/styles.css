@@ -22,7 +22,13 @@ body {
     margin-top: 60px;
 }
 
-
+.peliculaspopulares {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2%;
+    gap: 10px;
+    box-shadow: 0rem 0rem 10px 8px rgb(255 255 255 / 25%);
+}
 
 
  a.apolaroid:hover {
@@ -50,7 +56,8 @@ body {
 }
 
 .imagen {
-    width: 100%;
+    
+    width: 300px;
     padding: 2%;
     border-radius: 15px;
 }
@@ -89,10 +96,19 @@ a,a:hover {
     
     
     
-    
+    .peliculaspopulares {
+        width: 300px;
+        display: flex;
+        grid-template-columns: repeat(6,100%);
+        gap: 1%;
+        margin-right:1%;
+        margin-left: 1%;
+        margin-bottom: 2%;
+        
+    }
     
 .card-container{
-    display: grid;
+    display: flex;
         grid-template-columns: repeat(2,46%);
         gap: 1%;
         margin-right:50px;
@@ -186,6 +202,7 @@ form button{
         width: 80px;
        
     }
+
     .moovify{
         width: auto;
     }
