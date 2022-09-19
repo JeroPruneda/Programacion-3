@@ -50,7 +50,7 @@ class TodasSeries extends Component {
             <h3>TODAS LAS SERIES</h3>
             <button onClick={() => this.traerMas()} className="botton"> Traer mas series</button>
         </div>
-        <section className="card-container">
+        <section className="card">
             {
                 this.state.data.length > 0 ?
                     this.state.data.map((personaje, idx) => 

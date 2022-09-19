@@ -33,13 +33,7 @@ class Peliculas extends Component {
         .catch(err => console.log(err)) 
     }
     
-    agregarFavoritos(id){
-        let agregar = this.state.data.filter(agrega => agrega.id !== id)
-        this.setState({
-            data: agregar
-        })
-
-    }
+   
 
     
 
@@ -50,7 +44,7 @@ class Peliculas extends Component {
             <h3>PELÍCULAS POPULARES</h3>
            
         </div>
-        <section className="card-container">
+        <section className="card">
             {
                 this.state.data.length > 0?
                     this.state.data.map((jose, idx) => 

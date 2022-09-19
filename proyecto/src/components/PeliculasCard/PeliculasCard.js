@@ -71,9 +71,9 @@ class PeliculasCard extends Component {
   render(){
     return (
       
-    <section className='peliculaspopulares'>
-    <a className="apolaroid">
-        <article className="polaroid">
+      <section className="peliculaspopulares">
+      <a className="apolaroid">
+          <article className="polaroid">
             <img className="imagen" src={`https://image.tmdb.org/t/p/w342/${this.props.image}`} alt="" /> 
             <div className="textopolaroid">
               <p className="textopolaroidtitulo"> <Link to={`/detalle/${this.props.id}`}> {this.props.name}</Link></p>
@@ -85,20 +85,21 @@ class PeliculasCard extends Component {
                 <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
               {this.state.verMas ? 
-                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                        <button className='verMas'  onClick={() => this.hide()}>Ver mas</button>   
                         :   
                         <section className='extra'>                            
                             <p>Descripcion: {this.props.descripcion}</p> 
-                            <button  onClick={() => this.show()}>Ver menos</button>
+                            <button className='verMas'  onClick={() => this.show()}>Ver menos</button>
                         </section>                                          
                                              
                         
                     }   
             </div>
         </article>
+        
    </a>
-   
-</section>
+   </section>
+
     )
     
   }
