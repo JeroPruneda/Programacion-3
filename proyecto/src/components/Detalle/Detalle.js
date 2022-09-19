@@ -6,13 +6,15 @@ class Detalle extends Component{
         super(props);
         this.state = {
             detalle: {
-                genres: []
+              genres: []
             },
+            favoritos: false
 
-            
         }
     } 
     componentDidMount(){
+
+       
         fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=7a176cc95147be6e695be2faf0e8ff9c`)
         .then(resp => resp.json())
         .then(data => {console.log(data)
@@ -20,8 +22,51 @@ class Detalle extends Component{
             detalle: data,
         })  })
         .catch(error => console.log(error))
-    
+
+        let fav= localStorage.getItem("favoritos")
+        let string = JSON.parse(fav)
+        if(fav !== null){
+        let esFavorito = string.includes(this.state.detalle.id)
+        if((esFavorito) === true){
+            this.setState({
+                favoritos : true
+              })
+         }
+        }
     }
+
+    agregarFavoritos(id){
+        let fav = localStorage.getItem("favoritos")
+        if (fav === null) {
+          let arr = [id]
+          let string = JSON.stringify(arr)
+          localStorage.setItem("favoritos", string)
+          
+          
+        } else {
+          let parse =  JSON.parse(fav)
+          parse.push(id)
+          let string = JSON.stringify(parse)
+          localStorage.setItem("favoritos", string)
+        }
+    
+        this.setState({
+          favoritos: true
+        })
+      }
+
+      removeFavoritos(id){
+        let fav = localStorage.getItem("favoritos")
+        let parsed = JSON.parse(fav)
+        let filtro = parsed.filter(elm => elm !== id) 
+        let string = JSON.stringify(filtro)
+        localStorage.setItem("favoritos", string)
+    
+        this.setState({
+          favoritos: false
+        })
+      }
+
 
 
     render(){
@@ -70,6 +115,12 @@ class Detalle extends Component{
                 <p className="rating">Rating: {this.state.detalle.vote_average}/10</p>
                 <p class="sinopsis"></p>
                 <p className="sinopsis">{this.state.detalle.overview}</p>
+                {
+                this.state.favoritos ? 
+                <button onClick={() => this.removeFavoritos(this.state.detalle.id)}> Sacar de Favoritos</button>
+                : 
+                <button onClick={() => this.agregarFavoritos(this.state.detalle.id)} > Agregar a Favoritos</button> 
+              }
                 
             </div>
         </main>

@@ -29,9 +29,7 @@ class PeliculasCard extends Component {
           this.setState({
             favoritos : true
           })
-        }}
-
-          
+        }} 
   }
 
   agregarFavoritos(id){
