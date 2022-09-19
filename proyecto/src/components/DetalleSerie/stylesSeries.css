@@ -1,212 +1,252 @@
-/* Detalle de las Series */
-
-* {
-    box-sizing: border-box;
+/*Generales*/
+body{
+    
+    background-color:rgb(18, 19, 31); 
+   color: rgb(213, 211, 211);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*Mobile*/
-body {
-    background-color: white;
-    margin: 0px;
+li {
+   list-style-type: none;
 }
 
-/*Header*/
+ul {
+   margin: 0;
+   border: 0;
+   padding: 0;
+}
 
-.header {
-    background-color: black;
-    background-size: 100%;
-    background-repeat: no-repeat;
+a {
+   text-decoration: none;
+   color: rgb(213, 211, 211)
+}
+/*Header Responsive*/
+header {
+   margin-bottom: 5%;
+}
+
+header a{
+   font-size: 26px;
+}
+
+header input {
+   height: 20px;
+}
+
+header img {
+   max-width: 150px;
+}
+
+form {
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 22.5vw;
+   margin-top: 20px;
+   margin-left: 20px;
+}
+
+form button {
+   margin-top: 4px;
+}
+
+/*Pagina Principal*/
+main{
+   width: 95vw;
+   margin: auto;
+   color: black;
+   background-color: black;
+   border-radius: 8px;
+   padding-bottom: 2px;
+   margin-bottom: 5%;
+}
+
+main a{
+   color: black;
+   font-weight: 500;
 }
 
 .portada {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding:1%;
-    align-items: center;
-} 
-
-.eye {
-    margin: 3%;
-    margin-left: 3%;
+   padding-top: 2.5%;
+   display: flex;  
 }
 
 
-.botongeneros {
-    text-align: right;
-    color: #A6A292;
-    font-size: 18px;
-    text-decoration: none;
-    font-family: 'Arapey', serif;
-    margin: 3%;
+.portada img {
+   width: 200%;
+   display: block;
+   margin: auto;
+   height: 700px;
 }
 
-.botongeneros:hover {
-    opacity:50%;
+.portada .imgLaptop{
+   display: none;
 }
 
-
-.fotoeye {
-    width: 30%;
+.info {
+   background-color: rgb(191, 187, 187);
+   border-radius: 8px;
+   width: 95%;
+   margin: 1.5% auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
-.fotoeye:hover {
-    opacity:50%;
+.genero {
+   text-align: center;
 }
 
-/*Main*/
-.contenido {
-    display: grid;
-    grid-template-rows: repeat(1,1fr);
-    justify-content: space-around;
+h1 {
+   text-align: center;
 }
 
-.imagen {
-    margin-top:none;
-    width: 90%;
-    justify-content: center;
-    height: inherit;
-    width: 100%;
+.clasificacion {
+   height: fit-content;
+   border: 0.5px dashed black;
+   font-weight: 600;
 }
 
+.detalles{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
 
-a, a:hover{
-    text-decoration: none;
-    color: black;
 }
 
-a:hover {
-    opacity:50%
+.detalles li{
+   margin-right: 1.5%;
 }
 
-h3.titulo {
-    font-family: 'Arapey', serif;
-    color:black;
-    font-size: 60px;
-    margin-bottom:3%;
-    margin-top: 3%;
-    margin: 1%;
+.rating{
+   font-weight: 700;
 }
 
-.trama {
-    font-family: 'Arapey', serif;
-    color:black;
-    font-size:15px;
-    margin: 1%;
-    margin-top:5%;
-    margin-bottom: 3%;
+.sinopsis{
+   text-align: center;
+   margin-left: 15px;
+   margin-right: 15px;
 }
 
-.button {
-    margin: 1%;
-    background-color: black;
-    font-family: 'Arapey', serif;
-    border: none;
-    color: white;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 10px;
+.botonFav{
+   background-color: black;
+   color: white;
+   margin-bottom: 5px;
 }
 
-
-.button:hover {
-    opacity:50%;
-    text-decoration: none;
+/*Footer*/
+.participantes{
+   color: white;
+   text-align: center;
+   font-size: 15px;
+}
+footer {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   justify-content: center;
+   margin-bottom: 2.5%;
+   align-items: center;
 }
 
-.reviews {
-    font-size: 15px;
-    margin-top: 2%;
-}
-    
-.informacion {
-    line-height: 150%;
-    font-family: 'Arapey', serif;
-    color:black;
-    font-size:15px;
-    text-decoration: none;
-    list-style-type: none;
-    padding: 0%;
-    margin: 1%;
-    margin-top:2%;
-    margin-bottom: 5%;
+footer img{
+   width: 80px;
+   margin-left: 20px;
+   border-radius: 8px;
 }
 
-
-/*Tablet*/
-@media (min-width:576px) {
-    .botongeneros {
-       font-size: 35px;
-    }
-
-    .trama {
-        font-size:20px;
-    }
-
-    .informacion{
-        font-size: 20px;
-    }
-
-    .reviews {
-        font-size: 20px;   
-    }
+.moovify{
+   text-decoration: none;
+   color: white;
+   font-size: 30px;
+}
+.fondo{
+   width: 100%;
+   font-size: 15px;
+   text-align: center;
+   color:grey;
+   margin-bottom: 0px;
 }
 
-/*Desktop*/
-@media (min-width:1024px){
+@media(min-width: 1024px){
 
-    /*Header*/
+/*Header Responsive*/
+header {
+   margin-bottom: 5%;
+}
 
-    .header {
-        
-        background-size: cover;
-    }
+header a{
+   font-size: 26px;
+}
 
-    a.eye {
-        margin: 1%;
-        margin-left: 1%;
-        width: 50%;
-        margin-bottom: 2.5%;
-    }
+header input {
+   height: 20px;
+}
 
-    .botongeneros {
-        font-size: 40px;
-        margin: 1%;
-        margin-bottom: 2.5%;
-    }
+header img {
+   max-width: 150px;
+}
 
-    /*Main*/
-    .contenido {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 20px;
-        height: 50em;
-    }
+form button{
+   height: 26px;
+}
 
-    .titulo {
-        font-size: 80px;
-    }
+/*Principal Responsive*/
+main{
+   background-color: transparent;
+   display: flex;
+   flex-direction: row;
+}
 
-    .trama {
-        font-size:25px;
-        margin-bottom: 5%;
-    }
+.portada .imgMobile{
+   display: none;
 
-    .button{
-        font-size: 20px;
-        
-    }
+}
 
-    .informacion {
-        font-size:25px;
-        margin-top: 5%;
-    }
+.imgMobile{
+   text-align: center;
+}
 
+.portada .imgLaptop{
+   display: block;
+   width: 200%;
+   height: 100%;
+}
 
-    .reviews {
-        font-size: 25px;
-    }
+.portada {
+   background-color: black;
+   width: 40%;
+   padding: 2%;
+   border-radius: 8px;
+   margin-right: 2.5%;
+   max-width: fit-content;
+}
+
+.portada img{
+   max-width: 400px;
+   width: 300px;
+}
+
+.info{
+   font-size: 20px;
+   max-height: 40%;
+   max-width: 60%;
+}   
+
+h1{
+   font-size: 40px;
+}
+
+.titulopeli{
+   font-size:17px
+}
+.portada .imgMobile{
+   display: none;
+}
 
 }
