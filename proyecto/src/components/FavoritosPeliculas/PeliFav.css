@@ -81,9 +81,10 @@ a,a:hover {
 }
 
 .textopolaroidtitulo{
-    margin: 0px;
+    margin: 10px;
     color: black;
     text-decoration-line: none;
+    font-size: 30px;
 }
 
 

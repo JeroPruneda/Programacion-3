@@ -85,11 +85,11 @@ class PeliculasCard extends Component {
                 <button onClick={() => this.agregarFavoritos(this.props.id)} > Agregar a Favoritos</button> 
               }
               {this.state.verMas ? 
-                        <button  onClick={() => this.hide()}>Ver mas</button>   
+                        <button className='verMas'  onClick={() => this.hide()}>Ver mas</button>   
                         :   
                         <section className='extra'>                            
                             <p>Descripcion: {this.props.descripcion}</p> 
-                            <button  onClick={() => this.show()}>Ver menos</button>
+                            <button className='verMas'  onClick={() => this.show()}>Ver menos</button>
                         </section>                                          
                                              
                         
